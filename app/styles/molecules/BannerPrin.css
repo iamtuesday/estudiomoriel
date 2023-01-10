@@ -1,0 +1,78 @@
+.srt {
+  @apply font-josefinsans font-extrabold text-[3.5rem] text-primary leading-[130%];
+  @screen laptop {
+    font-size: calc(6.5rem * var(--scale));
+    width: calc(85rem * var(--scale));
+  }
+}
+
+.banner-prin {
+    @apply relative isolate pt-[10rem] px-[2.3rem];
+    max-width: 100%;
+    background-image: var(--bg-mobile);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 58.8rem;
+    &::before {
+      content: "";
+      background: rgba(0, 0, 0, 0.8);
+      mix-blend-mode: multiply;
+      @apply absolute inset-0 z-[-1];
+    }
+    @screen laptop {
+      background-image: var(--bg-desktop);
+      height: calc(87rem * var(--scale));
+      padding: 0 calc(21.2rem * var(--scale));
+      padding-top: calc(24rem * var(--scale));
+      &::before {
+        content: "";
+        background: #ced4da;
+      }
+   
+    }
+    &__subtitle {
+      @apply font-roboto font-light text-content text-[2.42rem]  leading-[170%];
+      @media screen(laptop){
+        font-size: calc(2.5rem * var(--scale));
+        margin-bottom: calc(2.5rem * var(--scale));
+      }
+    }
+  
+    &__btn {
+      @apply inline-block;
+      @media screen(laptop){
+        margin-top: calc(2.5rem * var(--scale));
+      }
+    }
+ 
+
+  }
+  
+  .HomeBanner {
+    @apply relative isolate;
+    &-pagination {
+      @apply justify-center gap-4 mt-[2rem] hidden z-[5];
+  
+      @screen laptop {
+        @apply absolute flex;
+        top: calc(72rem * var(--scale));
+        left: calc(90rem * var(--scale));
+      }
+  
+      @screen desktop {
+        left: calc(93rem * var(--scale));
+      }
+  
+      .swiper-pagination-bullet {
+        transition: background-color 0.3s ease;
+        @apply rounded-full w-[2rem] h-[2rem] cursor-pointer bg-[#edb970];
+  
+        &-active {
+          @apply bg-primary;
+        }
+      }
+    }
+  }
+  
+  

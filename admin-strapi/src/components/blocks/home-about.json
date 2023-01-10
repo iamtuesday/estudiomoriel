@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_home_abouts",
+  "info": {
+    "displayName": "HomeAbout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.titles"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "list": {
+      "displayName": "AboutList",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.about-list"
+    }
+  }
+}

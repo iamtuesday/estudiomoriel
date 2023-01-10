@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_home_services",
+  "info": {
+    "displayName": "HomeServices",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.titles"
+    },
+    "cardService": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-service"
+    }
+  }
+}

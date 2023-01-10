@@ -1,0 +1,65 @@
+.Information {
+  @apply flex flex-col text-center justify-center items-center relative;
+  &-h2 {
+    @apply font-josefinsans font-bold text-[2.5rem] leading-[125%] text-black;
+    @screen laptop {
+      @apply leading-[189%];
+      font-size: calc(4.5rem * var(--scale));
+    }
+  }
+  &-h3 {
+    @apply font-josefinsans text-secondary relative  font-semibold  text-[1.5rem] leading-[1] tracking-[.02em];
+    @screen laptop {
+      font-size: calc(2rem * var(--scale));
+      line-height: calc(2.7rem * var(--scale));
+    }
+  }
+  &-content {
+    @apply font-josefinsans  mt-[1rem] font-light text-[1.5rem] leading-[170%]   text-content;
+    @screen laptop {
+      @apply w-[76%] mt-0;
+      font-size: calc(1.85rem * var(--scale));
+    }
+  }
+}
+
+.Information.left {
+  @apply text-left justify-start items-start;
+  &-h2 {
+    @apply text-left;
+  }
+
+  .Information-content {
+    @apply font-josefinsans font-normal  text-content;
+    @screen laptop {
+      width: calc(67.4rem * var(--scale));
+      font-size:calc(2rem*var(--scale));
+    }
+  }
+}
+.Information-h3.left {
+  @apply pl-[5rem];
+
+  @screen laptop {
+    padding-left: calc(7rem * var(--scale));
+  }
+}
+.Information-content.width {
+  @apply w-[82%];
+  @screen laptop {
+    width: calc(69.8rem * var(--scale));
+  }
+}
+
+.Information.contact {
+  @apply flex flex-col text-center justify-center items-center relative;
+  @screen laptop {
+    @apply text-left justify-start items-start;
+  }
+}
+
+.Information-h3.contact {
+  @screen laptop {
+    padding-left: calc(7rem * var(--scale));
+  }
+}

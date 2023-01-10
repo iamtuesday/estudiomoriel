@@ -1,0 +1,182 @@
+.HomeCharacterist{
+  @apply  flex h-[30rem];
+  @media screen(laptop){
+    height: calc(32rem * var(--scale));
+  }
+  
+  .swiper-wrapper{
+    .swiper-slide{
+      &:first-child{
+        background: #fafafa;
+      }
+      &:nth-child(2){
+        background: #f6f6f6;
+      }
+      &:nth-child(3){
+        background: #efefef;
+      }
+      &:last-child{
+        background: #e9e9e9;
+      }
+    }
+  } 
+
+  .swiper-slide{
+    @apply flex justify-center items-center text-center;
+    /* @media screen(laptop){
+      @apply flex justify-center items-center text-center;
+    } */
+  }
+
+  &-icon{
+    @apply  mx-auto inline-block;
+    @media screen(laptop){
+      @apply  mx-auto inline-block;
+    }
+  }
+
+  &-h3{
+    @apply font-josefinsans text-black font-medium flex flex-col items-center justify-center text-[1.9rem];
+    @media screen(laptop){
+      font-size: calc(2.2rem * var(--scale));
+    }
+
+    &::after{
+      content: "";
+      width: 5rem;
+      height: .3rem;
+      @apply  bg-[#c3c3c3] mt-[1rem] rounded-[1rem] ;
+      @media screen(laptop){
+        width: calc(5rem * var(--scale));
+        height: calc(.35rem * var(--scale));
+        margin-top: calc(.5rem * var(--scale));
+      }
+    }
+  }
+
+  &-p{
+    @apply font-roboto text-content font-light mt-[1rem] w-[65%] mx-auto;
+    @media screen(laptop){
+      @apply  w-[70%] ;
+      margin-top: calc(1rem * var(--scale));
+      font-size: calc(1.8rem * var(--scale));
+    }
+  }
+}
+
+
+.Characterist {
+  @apply relative  px-[2.5rem] pt-[10.4rem] isolate text-center text-white mb-[7rem];
+
+  @screen laptop {
+    top: calc(-9rem * var(--scale));
+  }
+  &::after {
+    content: '';
+    background: #002abd;
+    mix-blend-mode: multiply;
+    z-index: -1;
+    @apply absolute inset-0;
+  }
+  h2,
+  h3 {
+    @apply font-lato not-italic font-bold text-[2.5rem] leading-[125%] text-center;
+    @screen laptop {
+      font-size: calc(4rem * var(--scale));
+      line-height: calc(3rem * var(--scale));
+    }
+  }
+  h3 {
+    @apply mt-[3rem] mb-[5.3rem];
+    @screen laptop{
+      margin-bottom: calc(-1.7rem*var(--scale));
+    }
+  }
+  &-picture {
+    z-index: -1;
+    @apply absolute inset-0;
+  }
+  &-ctn {
+    @apply w-[95%]  bg-secondary relative left-[1rem] mt-[2rem] top-[5rem];
+    border-radius: 10.7724px;
+    @screen laptop {
+      @apply w-[51.2%];
+      left: calc(45rem * var(--scale));
+    }
+  }
+  &__content {
+    @apply pt-[2.5rem] pb-[1.8rem] gap-[1.2rem] flex justify-center items-center flex-col;
+    @screen laptop {
+      @apply py-[3rem] pl-[3.8rem] relative;
+      /* width: 70%; */
+    }
+  }
+
+  &__picture {
+    @apply h-auto flex justify-center items-center;
+    img {
+      @apply h-[3.2rem] w-[2.8rem];
+      @screen laptop {
+        height: calc(6.5rem * var(--scale));
+        width: calc(5.5rem * var(--scale));
+      }
+    }
+  }
+  &__info {
+    .title {
+      @apply font-dmsans not-italic font-medium text-[1.5rem] leading-[1.8rem] text-[#ffffff] text-center;
+      letter-spacing: -0.01em;
+      @screen laptop {
+        @apply mx-auto;
+        font-size: calc(2.1rem * var(--scale));
+        line-height: calc(2.5rem * var(--scale));
+        width: 60%;
+      }
+    }
+  }
+  .swiper-slide {
+    @screen laptop {
+      &::after {
+        @apply absolute;
+        content: '';
+        left: calc(31rem * var(--scale));
+        width: calc(0.2rem * var(--scale));
+        height: calc(8rem * var(--scale));
+        top: calc(5.5rem * var(--scale));
+        background: #ffffff;
+        opacity: 0.4;
+      }
+    }
+  }
+  .swiper-slide:last-child {
+    @screen laptop {
+      padding-right: calc(10rem * var(--scale));
+      &::after {
+        content: '';
+        width: 0;
+      }
+    }
+  }
+  .swiper-slide:nth-child(2) {
+    @screen laptop {
+      padding-right: calc(5rem * var(--scale));
+    }
+  }
+  &-pagination {
+    @apply flex items-center justify-center gap-[.8rem] mt-[.2rem] pb-[2rem];
+    @screen tablet {
+      @apply hidden;
+    }
+  }
+  .swiper-pagination-bullet {
+    @apply rounded-full cursor-pointer;
+    transition: background 0.5s ease;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 1px solid #ffffff;
+    background: transparent;
+    &-active {
+      @apply bg-[#ffffff];
+    }
+  }
+}

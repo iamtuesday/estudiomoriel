@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_card_articles",
+  "info": {
+    "displayName": "cardArticle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  }
+}

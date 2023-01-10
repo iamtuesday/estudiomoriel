@@ -1,0 +1,12 @@
+.HomeBlog{
+  @apply px-[.7rem] pt-[3rem] pb-[11rem];
+  &-cards{
+    @apply grid grid-cols-1;
+    @screen tablet{
+      @apply grid-cols-2;
+    }
+    @screen tabletxl{
+      @apply grid-cols-3 gap-[5.6rem];
+    }
+  }
+}

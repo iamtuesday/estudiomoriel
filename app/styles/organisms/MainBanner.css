@@ -1,0 +1,120 @@
+.MainBanner {
+  @apply relative;
+  height: 65vmax;
+  @media screen and (max-height: 700px) {
+    height: 80vmax;
+  }
+  @screen tablet {
+    height: 65vmax;
+  }
+  @media screen(laptop) {
+    height: 110vh;
+    margin-top: calc(-16rem * var(--scale));
+  }
+  &::after {
+    @apply absolute inset-0;
+    content: '';
+    background: linear-gradient(
+      101.67deg,
+      #002abd 19.56%,
+      rgba(0, 64, 168, 0) 96.77%
+    );
+    @screen laptop {
+      background: linear-gradient(
+        148.42deg,
+        #002abd 16.62%,
+        rgba(0, 64, 168, 0) 71.49%
+      );
+      background-blend-mode: multiply;
+    }
+  }
+
+  &-background {
+    @apply absolute inset-0;
+  }
+  &-socials{
+    @apply hidden;
+    @screen laptop{
+      @apply inline-block relative top-[60rem] z-[3];
+      top:calc(68rem*var(--scale));
+      left:calc(5.5rem*var(--scale));
+      .socials{
+        @apply text-white ;
+        font-size:calc(3rem*var(--scale));
+      }
+    }
+    @screen desktop{
+      top:calc(80rem*var(--scale));
+    }
+  }
+  &-container {
+    @apply absolute text-white mx-auto px-[.7rem];
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &-grid {
+    @media screen(laptop) {
+      @apply grid;
+      padding-top: 10rem;
+    }
+  }
+  &-content {
+    @apply flex flex-col justify-center relative;
+    @screen tablet {
+      @apply w-[67%];
+    }
+  }
+
+  &-h1 {
+    @apply font-lato font-extrabold text-[5.1rem] not-italic leading-[5.6rem] text-[#ffffff] w-[90%];
+    letter-spacing: 0.02em;
+    span{
+      color:red;
+    }
+    @screen laptop {
+      font-size: calc(7.8rem * var(--scale));
+      line-height: calc(8.5rem * var(--scale));
+      width:calc(70rem*var(--scale));
+    }
+  }
+  &-p {
+    @apply font-normal font-lato text-[#ffffff] text-[1.5rem] leading-[2.4rem] mt-[.6rem] w-[80%];
+    letter-spacing: 0.02em;
+    @media screen(laptop) {
+      font-size: calc(2.4rem * var(--scale));
+      line-height: calc(3.8rem * var(--scale));
+      width: calc(70rem * var(--scale));
+    }
+  }
+  &-picture {
+    @apply flex justify-end;
+    img {
+      @apply hidden;
+      @media screen(laptop) {
+        @apply inline-block;
+        border-radius: 1rem;
+        width: calc(68.5rem * var(--scale));
+        height: calc(70.1rem * var(--scale));
+      }
+    }
+  }
+  &-btns {
+    @apply mt-[2.3rem] flex gap-[1.8rem];
+    @media screen(laptop) {
+      margin-top: calc(6.5rem * var(--scale));
+    }
+  }
+
+
+  &-i {
+    @apply mr-[1rem] text-[1.2rem];
+    @media screen(laptop) {
+      @apply font-semibold;
+      font-size: calc(1.5rem * var(--scale));
+      margin-right: calc(1.5rem * var(--scale));
+    }
+  }
+}

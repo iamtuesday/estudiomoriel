@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_about_lists",
+  "info": {
+    "displayName": "AboutList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

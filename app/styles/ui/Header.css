@@ -1,0 +1,57 @@
+.Header {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  @apply sticky top-0 right-0 left-0 z-20 flex items-center w-full;
+  transition: background 0.5s ease;
+  height: 5.8rem;
+  background: #ffffff;
+  @media screen(laptop) {
+    @apply flex justify-between;
+    height: calc(8.5rem * var(--scale));
+    box-shadow: none;
+    top: -1px;
+    /* z-index: 1; */
+  }
+
+  &-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    @apply fixed inset-0 bg-black/70 pointer-events-none w-screen h-screen;
+
+    @media screen(laptop) {
+      @apply hidden;
+    }
+
+    &.isActive {
+      opacity: 1;
+      @apply pointer-events-auto;
+    }
+  }
+
+  &-logo {
+    @apply left-[3rem]   w-[9rem] absolute top-[1rem] bg-white pb-[1rem] px-[1rem];
+    border-radius: 0px 0px 10px 10px;
+    @screen laptop {
+      @apply relative;
+      left: calc(21rem * var(--scale));
+      top: calc(6rem * var(--scale));
+      width: calc(16rem * var(--scale));
+    }
+  }
+
+  > .socials {
+    font-size: 2.5rem;
+    @apply flex gap-4 text-primary absolute items-center right-28 mr-[1.6rem] top-[1.5rem];
+
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+  &-menuIcon {
+    transition: transform 0.3s ease;
+    @apply absolute right-0 z-10;
+
+    &.isActive {
+      transform: translate(-1.7rem, 0.5rem);
+    }
+  }
+}

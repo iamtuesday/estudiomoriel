@@ -1,0 +1,71 @@
+.btn {
+  &-default {
+    @apply font-roboto text-[1.5rem] leading-[1] text-white font-semibold rounded-[.5rem] bg-transparent px-[2.2rem] py-[1.6rem];
+    border: 0.17rem solid #fff;
+    transition: all ease-in-out 0.35s;
+
+    @screen laptop {
+      border: 0.2rem solid #fff;
+      font-size: calc(2rem * var(--scale));
+      padding: calc(2rem * var(--scale)) calc(3rem * var(--scale));
+    }
+
+    &:hover {
+      @apply bg-white text-[#25327B];
+    }
+  }
+
+  &-light {
+    @apply font-roboto text-[1.5rem] leading-[1] text-white font-semibold rounded-[.37rem]  bg-[#25327B] py-[1.8rem] px-[2.2rem];
+    /* border: .17rem solid #25327B; */
+    transition: all ease-in-out 0.35s;
+
+    @screen laptop {
+      @apply rounded-[.5rem] bg-transparent text-[#25327B];
+      font-size: calc(2rem * var(--scale));
+      border: 0.2rem solid #25327b;
+      padding: calc(2rem * var(--scale)) calc(3rem * var(--scale));
+    }
+
+    &:hover {
+      @apply bg-[#25327B] text-white;
+    }
+  }
+
+  &-secondary {
+    @apply relative font-josefinsans font-medium text-[1.5rem] uppercase text-primary px-[2rem] py-[1.5rem];
+    &::before {
+      content: "";
+      transition: all 700ms ease;
+      width: 100%;
+      @apply absolute inset-0 z-[-1] bg-secondary;
+    }
+
+    &::after {
+      content: "";
+      transition: all 700ms ease;
+      width: 0;
+      @apply absolute inset-0  z-[-1]  bg-white;
+    }
+
+    &:hover {
+      @apply text-white z-[1];
+    }
+    @media screen(laptop) {
+      font-size: calc(1.9rem * var(--scale));
+      padding: calc(1.7rem * var(--scale)) calc(4.5rem * var(--scale));
+
+      &:hover::after {
+        @apply w-full bg-primary;
+      }
+    }
+  }
+
+  &-read {
+    @apply font-poppins text-[1.4rem] leading-[1] text-content font-semibold uppercase;
+    transition: all ease-in 0.4s;
+    @screen laptop {
+      font-size: calc(1.5rem * var(--scale));
+    }
+  }
+}

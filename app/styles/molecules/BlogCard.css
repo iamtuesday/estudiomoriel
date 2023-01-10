@@ -1,0 +1,25 @@
+.BlogCard {
+  @apply mt-[3.5rem];
+  h3 {
+    @apply font-lato not-italic font-semibold text-[1.24rem] leading-[1.4rem] uppercase text-[#727272];
+    letter-spacing: 0.1em;
+    @screen laptop {
+      font-size: calc(1.64rem * var(--scale));
+      line-height: calc(1.4rem * var(--scale));
+    }
+  }
+  h2 {
+    @apply font-lato not-italic font-bold text-[2.4rem] leading-[3.2rem] text-[#323232];
+    @screen laptop {
+      font-size: calc(2.4rem * var(--scale));
+      line-height: calc(4.6rem * var(--scale));
+    }
+  }
+  p {
+    @apply font-roboto not-italic font-light text-[1.5rem] leading-[2.2rem] text-[#606060];
+    @screen laptop {
+      font-size: calc(1.9rem * var(--scale));
+      line-height: calc(3.2rem * var(--scale));
+    }
+  }
+}

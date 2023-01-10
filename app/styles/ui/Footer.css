@@ -1,0 +1,56 @@
+.Footer {
+   @apply bg-[#121212] text-white pt-[2rem] pb-[3rem] px-8;
+
+   @media screen(laptop) {
+      padding: calc(7rem * var(--scale)) 0;
+   }
+
+   &-container {
+      @apply flex flex-col;
+      @media screen(laptop) {
+         width: 82%;
+         gap: calc(10.6rem * var(--scale));
+         @apply mx-auto flex-row justify-center items-center;
+      }
+   }
+
+   &-socials {
+      font-size: 1.7rem;
+      @apply  gap-4 pb-4 hidden;
+
+      @media screen(laptop) {
+         font-size: calc(2.4rem * var(--scale));
+         gap: calc(2rem * var(--scale));
+         @apply border-none p-0;
+      }
+      .social__link {
+         @apply flex items-center justify-center;
+      }
+   }
+
+   &-ul {
+      @apply flex flex-col mt-8 gap-6 pb-[2.5rem];
+      @media screen(laptop) {
+         gap: calc(6.6rem * var(--scale));
+         @apply flex-row mt-0 pb-0;
+      }
+   }
+
+   &-a {
+      font-size: 1.3rem;
+      @apply flex items-center gap-5 font-lato font-normal leading-[1.4rem];
+      /* opacity: 0.8; */
+      @media screen(laptop) {
+         gap: calc(1.5rem * var(--scale));
+         font-size: calc(1.9rem * var(--scale));
+      }
+   }
+
+   &-i {
+      font-size: 1.6rem;
+
+      @media screen(laptop) {
+         font-size: calc(2rem * var(--scale));
+      }
+   }
+}

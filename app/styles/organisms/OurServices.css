@@ -1,0 +1,26 @@
+.OurServices {
+  @apply pb-[5rem] bg-[#f9f9f9] pt-[5rem];
+  @media screen(laptop) {
+    padding-top: calc(3rem*var(--scale));
+    padding-bottom: calc(12.8rem * var(--scale));
+  }
+  &-info {
+
+    @media screen(laptop) {
+      @apply flex justify-center items-center;
+      gap: calc(16.7rem * var(--scale));
+      h3{
+        margin-bottom: calc(-1.5rem*var(--scale));
+      }
+    }
+  }
+  &-p {
+    @apply font-light text-content leading-[2.6rem] text-[1.5rem] mt-[.8rem];
+    letter-spacing: 0.05em;
+    @media screen(laptop) {
+      @apply mt-0;
+      font-size: calc(1.9rem * var(--scale));
+      line-height: calc(3.3rem * var(--scale));
+    }
+  }
+}

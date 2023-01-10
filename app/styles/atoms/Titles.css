@@ -1,0 +1,52 @@
+.Titles{
+    &-h2 {
+        @apply text-[#232323]  font-josefinsans  font-bold text-[2.5rem] leading-[150%] uppercase flex flex-col items-center;
+        @media screen(laptop) {
+           @apply leading-[115%];
+           font-size: calc(3.7rem * var(--scale));
+        }
+        &::after{
+            content: " ";
+            @apply bg-[#c3c3c3] rounded-[1rem];
+            @media screen(laptop){
+                width: calc(5rem * var(--scale));
+                height: calc(.5rem * var(--scale));
+                margin-top: 1rem;
+            }
+        }
+     }
+     &-p {
+        @apply text-primary font-poppins  leading-[170%]  text-[1.5rem] font-semibold mt-[.5rem];
+        @media screen(laptop) {
+           font-size: calc(1.9rem * var(--scale));
+           width: calc(62rem * var(--scale));
+           margin-top: calc(2rem * var(--scale));
+        }
+     }
+ 
+     &-white{
+      .Titles-h2 {
+        @apply text-white;
+        @media screen(laptop) {
+          width: calc(40rem * var(--scale));
+        }
+  
+      }
+ 
+      .Titles-p{
+        @apply text-white;
+      }
+     }
+ 
+     &-Center{
+      .Titles-h2 {
+        @apply text-center;
+  
+      }
+ 
+      .Titles-p{
+        @apply text-center w-full;
+      }
+     }
+ 
+    }

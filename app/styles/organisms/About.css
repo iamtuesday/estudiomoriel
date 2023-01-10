@@ -1,0 +1,75 @@
+.HomeAbout {
+  @apply pb-[10rem] pt-[4.6rem] px-[3rem] bg-white;
+  @media screen(laptop){
+    padding-top: calc(10rem * var(--scale));
+  }
+  &-left{
+    @appply hidden;
+    @screen laptop {
+      @apply flex items-center justify-center;
+    }
+  }
+  &-left img{
+    @screen laptop {
+      @apply rounded-[1.5rem];
+     width: calc(55rem * var(--scale));
+     height: calc(40rem * var(--scale));
+    }
+  }
+
+  &-ctn {
+    @screen laptop {
+      @apply grid grid-cols-2 justify-between;
+      gap: calc(2rem * var(--scale));
+    }
+  }
+  &-list {
+    @apply hidden;
+    @screen laptop {
+      @apply flex justify-center;
+    }
+  }
+
+  &-content{
+    @screen laptop {
+      margin-top: calc(1rem * var(--scale));
+    }
+    p{
+      @screen laptop {
+        @apply text-center;
+        margin-top: calc(1.5rem * var(--scale));
+      }
+    }
+  }
+
+  &-content p{
+    @apply font-poppins font-light;
+    @screen laptop {
+      font-size: calc(1.75rem * var(--scale));
+    }
+  }
+
+  &-ul{
+    border-top: 1px solid #dcdcdc;
+    @apply grid grid-cols-3;
+    @screen laptop {
+      padding-top: calc(2rem * var(--scale));
+      margin-top: calc(3rem * var(--scale));
+    }
+
+    .HomeAbout-li{
+      @apply flex flex-col items-center justify-center;
+      @media screen(laptop){
+        gap: calc(1rem * var(--scale));
+      }
+      &:nth-child(2) {
+        border-left: 1px dashed #c3c3c3;
+        border-right: 1px dashed #c3c3c3;
+      }
+    }
+
+
+  }
+
+ 
+}

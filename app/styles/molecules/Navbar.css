@@ -1,0 +1,150 @@
+.Navbar {
+  padding-top: 1.3rem;
+  padding-bottom: 5.2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  transform: translateY(-101%);
+  transition: transform 0.3s ease;
+  @apply bg-secondary fixed top-0 right-0 left-0;
+
+  @media screen(laptop) {
+    @apply static inset-auto p-0 transform-none rounded-none h-full w-full bg-transparent;
+  }
+
+  &.isActive {
+    transform: translateY(0);
+  }
+
+  &-container {
+    margin-right: 6.3rem;
+    @apply flex justify-between ml-[-2rem];
+  }
+
+  &-logo {
+    width: 8.5rem;
+    background: #fff;
+    height: 8.5rem;
+    left: 6rem;
+    position: relative;
+    border-radius: 10px;
+    border-radius: 1px solid red;
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+
+  .socials {
+    font-size: 2rem;
+    margin-top: 0.9rem;
+    @apply flex text-white gap-4;
+
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+
+  &-ul {
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+    @apply font-normal flex flex-col text-[#ffffff];
+    @media screen(laptop) {
+      @apply flex flex-row m-0 font-normal mr-auto font-roboto h-full items-center relative  text-title  uppercase justify-center;
+      letter-spacing: 0.05em;
+      font-size: calc(1.7rem * var(--scale));
+      gap: calc(5.4rem * var(--scale));
+      left:calc(3rem*var(--scale));
+      width: 100%;
+    }
+  }
+
+  &-li {
+    border-top: 1px solid rgb(255 255 255 / 0.2);
+    padding: 0.2rem 0;
+    @apply px-12 relative flex flex-row;
+    &::after {
+      @apply absolute bg-secondary;
+      content: '';
+      bottom: calc(-1rem * var(--scale));
+      opacity: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2.5px;
+      width: calc(4.5rem * var(--scale));
+      transition: opacity 0.5s ease;
+      border-radius: 1rem;
+    }
+    &::before {
+      content: '/';
+      @apply absolute font-medium;
+      right:calc(-3rem*var(--scale));
+      font-size:calc(1.8rem*var(--scale));
+    }
+    &.isActive {
+      @apply font-bold;
+      @screen laptop {
+        font-weight: normal;
+      }
+    }
+    i {
+      @apply hidden;
+    }
+    @screen laptop {
+      @apply border-none p-0 relative text-title;
+      &:hover,
+      &.isActive {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-li:nth-child(5){
+    &::before{
+      content:'';
+      
+    }
+  }
+  .btn-number {
+    @apply hidden;
+    @screen laptop {
+      @apply block text-[#FF5C00] relative;
+      padding:calc(.75rem*var(--scale)) calc(2.6rem*var(--scale));
+      left: calc(12.5rem * var(--scale));
+      border: 1px solid #ff5c00;
+      border-radius: 5px;
+    }
+  }
+  &-a {
+    @apply block cursor-pointer;
+  }
+
+  &-contact {
+    &.BgRed {
+      @apply text-[#ffffff] font-semibold;
+      background: #5d84ff !important;
+    }
+    @media screen(laptop) {
+      font-size: calc(1.9rem * var(--scale));
+      border-radius: 5px;
+      gap: 0.9em;
+      padding: 0.8em 1.5em;
+      margin-left: calc(1.5rem * var(--scale));
+      letter-spacing: 0.05em;
+
+      &::after {
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    i {
+      @apply hidden text-content;
+      @media screen(laptop) {
+        font-size: calc(1.5rem * var(--scale));
+        @apply block;
+      }
+    }
+  }
+}

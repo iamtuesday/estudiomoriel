@@ -1,0 +1,58 @@
+.BannerInternal {
+  @apply relative pt-[4rem] pb-[3.5rem] ;
+  @media screen(laptop) {
+    @apply mb-0;
+    padding-top: calc(9rem * var(--scale));
+    padding-bottom: calc(9rem * var(--scale));
+  }
+
+  &-background {
+    @apply absolute inset-0;
+    z-index: -1;
+  }
+  &::after {
+    @apply absolute inset-0 bg-secondary;
+    /* background:#5D84FF; */
+    mix-blend-mode: multiply;
+    z-index: -1;
+    content: '';
+  }
+  &__info {
+    @apply flex flex-col justify-center items-center;
+    .title {
+      @apply font-rubik not-italic text-center font-bold text-[2.3rem] leading-[135%] text-[#ffffff];
+      @screen laptop {
+        font-size: calc(4.5rem * var(--scale));
+        line-height:135%;
+        letter-spacing:0.02em;
+      }
+    }
+    .content {
+      @apply font-roboto not-italic  w-[99%] my-[1.5rem] font-normal  text-center text-[1.5rem] leading-[170%]  text-[#ffffff];
+      @screen laptop {
+        font-size: calc(2rem * var(--scale));
+        width: calc(109rem*var(--scale));
+        margin-bottom: calc(3.7rem*var(--scale));
+        
+      }
+    }
+  }
+
+  &-pagination {
+    @apply flex items-center justify-center gap-[.8rem] mt-[3rem];
+    @screen tablet {
+      @apply hidden;
+    }
+  }
+  .swiper-pagination-bullet {
+    @apply rounded-full cursor-pointer;
+    transition: background 0.5s ease;
+    width: 1rem;
+    height: 1rem;
+
+    background: rgba(255, 255, 255, 0.5);
+    &-active {
+      background: #ffffff;
+    }
+  }
+}

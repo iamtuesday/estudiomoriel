@@ -1,0 +1,153 @@
+.Form {
+  border-radius: 8.27451px;
+  margin-top: 2.6rem;
+  @apply overflow-hidden mx-auto relative;
+
+  @media screen(laptop) {
+    border-radius: calc(1rem * var(--scale));
+    @apply mt-0 grid grid-cols-1;
+    /* grid-template-columns: 92.5% auto; */
+  }
+
+  &-form {
+    font-size: 1.5rem;
+    padding: 0 1.1rem 4.5rem;
+    gap: 1.2em;
+    @apply text-content font-normal flex flex-col;
+
+    @media screen(laptop) {
+      padding-left: calc(8rem * var(--scale));
+      padding-right: calc(10.5rem * var(--scale));
+      padding-top: calc(1.5rem * var(--scale));
+      padding-bottom: calc(5.6rem * var(--scale));
+      font-size: calc(1.8rem * var(--scale));
+      width: calc(92rem * var(--scale));
+      row-gap: 0;
+      @apply mt-0 grid grid-cols-3;
+      .name {
+        grid-area: 1 / 1 / 2 / 3;
+        width: calc(48.6rem * var(--scale));
+      }
+      .phone {
+        grid-area: 2 / 1 / 3 / 2;
+        width: calc(23.4rem * var(--scale));
+      }
+      .service {
+        grid-area: 2 / 2 / 3 / 3;
+        width: calc(23.4rem * var(--scale));
+      }
+      .message {
+        grid-area: 1 / 3 / 3 / 4;
+      }
+    }
+  }
+  &-captcha {
+    @screen laptop {
+    @apply relative;
+      grid-area: 3 / 2 / 4 / 3;
+      left: calc(25.5rem * var(--scale));
+    }
+  }
+  &-send {
+    grid-area: 4 / 2 / 4 / 4;
+  }
+  &-field {
+    .icon-next {
+      font-size: 1.2rem;
+      transform: rotate(90deg);
+      top: 2em;
+      right: 2em;
+      @apply text-content absolute pointer-events-none;
+
+      @media screen(laptop) {
+        font-size: calc(1.6rem * var(--scale));
+        right: calc(1.3em * var(--scale));
+        top: calc(2.1rem * var(--scale));
+      }
+    }
+  }
+
+  label {
+    color: #f0f0f0;
+  }
+
+  input,
+  select,
+  textarea {
+    border-radius: 9.13725px;
+    background-color: #ffffff;
+    margin-top: 0.2em;
+    border: 1px solid #4d4d4d;
+    @apply h-[5rem] px-[2rem] text-content;
+
+    @media screen(laptop) {
+      border-radius: calc(5px * var(--scale));
+      height: calc(5rem * var(--scale));
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    color: #7e7e7e !important;
+  }
+
+  textarea {
+    min-height: 12rem;
+    @apply pt-4;
+
+    @media screen(laptop) {
+      min-height: calc(11.1rem * var(--scale));
+      width: calc(48.6rem * var(--scale));
+    }
+  }
+
+  &-error {
+    font-size: 0.8em;
+    margin-top: 0.4em;
+    @apply text-red-500;
+  }
+
+  &-send {
+    @apply flex mt-2 items-center gap-12 justify-center;
+
+    @media screen(laptop) {
+      @apply col-span-2 relative;
+      margin-top: calc(2.5rem * var(--scale));
+      left: calc(25rem * var(--scale));
+    }
+  }
+
+  &-btn {
+    font-size: 1.5rem;
+    padding: 1.3rem 2.4rem;
+    gap: calc(1.5rem * var(--scale));
+    @apply text-[#ffffff] flex items-center bg-secondary font-lato;
+    border-radius: 5px;
+    @screen laptop {
+      @apply font-dmsans font-medium;
+      font-size: calc(2rem * var(--scale));
+      padding-right: calc(4.2rem * var(--scale));
+      padding-left: calc(4.2rem * var(--scale));
+      transition: background-color 900ms ease;
+      &:hover {
+        @apply !bg-primary;
+      }
+    }
+  }
+
+  &-response {
+    font-size: 1.4rem;
+    /* padding: 0 0em 1em; */
+    @apply absolute bottom-0 left-0 text-green-500 pl-[.4rem];
+    /* color : green o !important; */
+    /* margin-top: 5rem; */
+    @screen laptop {
+      font-size: calc(1.6vrem * var(--scale));
+      @apply static col-span-2 p-0;
+    }
+
+    &.failure {
+      @apply text-red-500;
+    }
+  }
+}
