@@ -40,10 +40,35 @@
       "repeatable": false,
       "component": "blocks.home-blog"
     },
-    "seo": {
+    "banner_middle": {
+      "displayName": "BannerMiddle",
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo"
+      "component": "blocks.banner-middle"
+    },
+    "faqs": {
+      "displayName": "Faqs",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.faqs"
+    },
+    "choose": {
+      "displayName": "WhyChoose",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.why-choose"
+    },
+    "banner_deudas": {
+      "displayName": "BannerDeudas",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.banner-deudas"
+    },
+    "reviews": {
+      "displayName": "HomeReviews",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.home-reviews"
     }
   }
 }

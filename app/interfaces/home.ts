@@ -1,4 +1,4 @@
-import { ImageMobile } from "./contact";
+import { Img } from "./contact";
 
 
 export interface Home {
@@ -17,8 +17,17 @@ export interface HomeData {
   HomeAbout: HomeAbout;
   characteristic: HomeCharac[];
   HomeBlog: HomeBlog;
+  banner_middle: BannerMid;
   seo: MetaSEO;
 }
+
+export interface BannerMid {
+  id: number;
+  bg: ImgMobile;
+  bg_mob: ImgMobile;
+  content: string;
+}
+
 export interface MetaSEO {
   id: number
   metaTitle: string
@@ -177,7 +186,7 @@ export interface HomeCharac {
   id: number;
   title: string;
   description: string;
-  icon: ImageMobile
+  icon: Img
 
 }
 

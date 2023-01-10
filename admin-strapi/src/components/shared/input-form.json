@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_input_forms",
+  "info": {
+    "displayName": "InputForm"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

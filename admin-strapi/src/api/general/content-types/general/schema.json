@@ -62,6 +62,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.social-network"
+    },
+    "map": {
+      "type": "richtext"
     }
   }
 }

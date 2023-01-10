@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_faq_lists",
+  "info": {
+    "displayName": "FaqList"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

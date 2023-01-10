@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_banner_deudas",
+  "info": {
+    "displayName": "BannerDeudas"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

@@ -1,121 +1,37 @@
 .ServicesCard {
-  @apply flex flex-col  bg-white relative;
-
-  border-radius: 5rem 0 5rem 0;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.5s ease;
-
-  @media (hover: hover) {
-    &:hover {
-      box-shadow: 0px 0px 10px rgba(0, 42, 189, 0.5);
-      .btn.secondary {
-        @apply text-secondary border-secondary;
-        &::after {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
   @screen laptop {
-    @apply grid-cols-2;
-    max-height: calc(71rem * var(--scale));
-  }
-  &-picture {
-    @apply h-auto w-full relative inset-0;
-    img {
-      width: 100%;
-      position: relative;
-      border-radius: 5rem 0 0 0;
-    }
-    &::after {
-      @apply absolute inset-0;
-      content: '';
-      background: linear-gradient(
-        288.7deg,
-        rgba(0, 42, 189, 0.8) 13.06%,
-        rgba(0, 42, 189, 0.528) 40.41%,
-        rgba(0, 42, 189, 0) 80.38%
-      );
-      mix-blend-mode: multiply;
-      @screen laptop {
-        opacity: 0;
-      }
-    }
-  }
-  &__content {
-    p {
-      @apply font-roboto font-light text-center w-full not-italic text-[1.5rem] leading-[2.4rem] text-content mb-[2rem];
-      max-height: 20rem;
-      @screen laptop {
-        @apply w-full;
-        margin-top: calc(0.8rem * var(--scale));
-        margin-bottom: calc(2rem * var(--scale));
-        font-size: calc(2rem * var(--scale));
-        line-height: calc(3.2rem * var(--scale));
-      }
-    }
-    ul {
-      @apply grid grid-cols-2 text-[1.5rem] text-content  font-light;
-      padding-left: 2.5rem;
-      list-style: square;
-      column-gap: 1rem;
-      @screen laptop {
-        font-size: calc(2rem * var(--scale));
-        padding-left: calc(5.5rem * var(--scale));
-        width: calc(40.5rem * var(--scale));
-        column-gap: 0;
-      }
-    }
-    p:last-child {
-      @screen laptop {
-        /* @apply mt-0 mb-0; */
-      }
-    }
-  }
-  &-info {
-    @apply px-[1.4rem] pb-[1.5rem]  flex flex-col pl-[3rem];
-    padding-top: calc(2rem * var(--scale));
-    @screen laptop {
-      padding: calc(4.8rem * var(--scale)) calc(3.5rem * var(--scale));
-      padding-bottom: 2rem;
-    }
+    @apply flex cursor-pointer;
+    gap: calc(2rem * var(--scale));
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 
-    h2 {
-      @apply font-lato font-semibold text-[1.9rem] not-italic leading-[3rem] text-left text-secondary;
-      @screen laptop {
-        margin-top: calc(1rem * var(--scale));
-        font-size: calc(2.3rem * var(--scale));
-        line-height: calc(4.9rem * var(--scale));
-      }
-    }
-    p {
-      @apply font-lato font-light text-left w-full not-italic text-[1.5rem] leading-[2.4rem] text-[#606060] mb-[2rem];
-      max-height: 20rem;
-      @screen laptop {
-        @apply w-full;
-        margin-bottom: 0.1rem;
-        margin-top: calc(0.8rem * var(--scale));
-        margin-bottom: 1rem;
-        /* margin-bottom: calc(6.4rem * var(--scale)); */
-        /* max-height: calc(22.5rem * var(--scale)); */
-        font-size: calc(2rem * var(--scale));
-        line-height: calc(3.2rem * var(--scale));
-      }
+  }
+
+  img{
+    @media screen(laptop) {
+      @apply h-full;
+      width: calc(12rem * var(--scale));
     }
   }
 
-  &-btn {
-    margin-top: auto;
-    margin-bottom: 2.6rem;
-    margin-left: 3rem;
-    /* @apply text-center; */
-    @screen laptop {
+  &-info{
+    @apply p-[1rem];
+    @media screen(laptop) {
+      @apply flex flex-col justify-between;
     }
   }
-}
-.ServicesCard {
-  &:hover {
 
+  &-h2{
+    @apply font-nunito font-bold text-[1.7rem] text-[#232323];
+    @media screen(laptop) {
+      font-size: calc(2rem * var(--scale));
+    }
+  }
+
+  &-p{
+    @apply font-poppins font-light text-[1.7rem] text-content;
+    @media screen(laptop) {
+      font-size: calc(1.75rem * var(--scale));
+    }
   }
 }

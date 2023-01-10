@@ -1,7 +1,7 @@
 .srt {
-  @apply font-josefinsans font-extrabold text-[3.5rem] text-primary leading-[130%];
+  @apply font-nunito font-extrabold text-[3.5rem] text-primary leading-[130%] uppercase;
   @screen laptop {
-    font-size: calc(6.5rem * var(--scale));
+    font-size: calc(6rem * var(--scale));
     width: calc(85rem * var(--scale));
   }
 }

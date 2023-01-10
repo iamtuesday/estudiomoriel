@@ -1,8 +1,7 @@
 .OurServices {
   @apply pb-[5rem] bg-[#f9f9f9] pt-[5rem];
   @media screen(laptop) {
-    padding-top: calc(3rem*var(--scale));
-    padding-bottom: calc(12.8rem * var(--scale));
+    padding: calc(10rem*var(--scale)) 0;
   }
   &-info {
 

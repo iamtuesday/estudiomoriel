@@ -1,28 +1,70 @@
-.Contact {
-  @apply px-[3rem]  bg-[#f9f9f9];
+.Contact-Wrapper{
+  @apply w-full relative bg-white isolate pt-[3rem] px-[.7rem] pb-[7.8rem];
+  background-image: url('/img/bg-contact.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  @media screen(laptop) {
-    /* padding-top: calc(13rem * var(--scale)); */
-    padding-bottom: 0;
-    padding-left:calc(37rem*var(--scale));
-    padding-right:calc(37rem*var(--scale));
-  }
-  &-content {
-    @apply px-[1.5rem] mt-[-2rem] bg-[#ffffff] pt-[4rem] relative top-[-2rem];
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  /* @media screen(tablet){
+      @apply px-[15%];
+  } */
 
-    @media screen(laptop) {
-      @apply px-0 flex-shrink-0 flex-1;
-      top:calc(-12rem*var(--scale));
-    }
+  @media screen(laptop){
+      background-image: url('/img/bg-contact.png');
+     padding: calc(12.9rem * var(--scale)) calc(22rem * var(--scale));
   }
-  &-info{
-    h3{
-      @apply text-[#4d4d4d];
-      @screen laptop{
-        margin-bottom: calc(-1.8rem*var(--scale));
+}
+.Contact{
+  @apply  bg-transparent px-[2.4rem] pt-[5.8rem] pb-[6.9rem];
+
+  @media screen(tablet){
+      @apply p-[4rem] py-[5rem];
+  }
+
+  @media screen(laptop){
+      @apply grid grid-cols-2;
+      /* padding: calc(13.9rem * var(--scale)) calc(8.2rem * var(--scale)); */
+      gap: calc(9.7rem * var(--scale));
+
+  }
+
+  &-Text{
+      @apply hidden;
+      @media screen(laptop){
+          @apply block font-roboto font-light text-[1.2rem] leading-[180%] text-content;
+          font-size: calc(2rem * var(--scale));
+          margin: calc(2.5rem * var(--scale)) 0;
       }
-    }
+  }
+  &-ul{
+      @apply hidden;
+      @media screen(laptop){
+          @apply block;
+          @apply flex flex-col;
+          gap: calc(2rem * var(--scale));
+      }
+  }
+
+  &-h2{
+      @apply block font-roboto font-semibold leading-[1] text-[#252525];
+      font-size: calc(1.7rem * var(--scale));
+      margin-top: calc(.5rem * var(--scale));
+  }
+
+  &-p{
+      @apply block font-roboto font-light leading-[150%] text-content;
+      font-size: calc(1.9rem * var(--scale));
+
+  }
+
+  &-li{
+      @apply grid grid-cols-[20%_80%];
+  }
+
+  &-form{
+      @apply mt-[3rem];
+      @media screen(laptop){
+          @apply m-0;
+      }
   }
 }

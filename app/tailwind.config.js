@@ -26,7 +26,8 @@ module.exports = {
             rubik: 'Rubik',
             lato: 'Lato',
             dmsans: 'DM Sans',
-            josefinsans: "Josefin Sans"
+            josefinsans: "Josefin Sans",
+            nunito: "Nunito"
          },
          screens: {
             phone: '375px',

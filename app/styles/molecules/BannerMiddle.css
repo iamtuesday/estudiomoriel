@@ -1,0 +1,34 @@
+.BannerMiddle {
+  @apply relative isolate overflow-hidden flex flex-col items-center justify-center h-[30rem];
+  max-width: 100%;
+  background-image: var(--bg-mobile);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  &::before {
+    content: "";
+    background: rgba(0,26,87,0.5);
+    mix-blend-mode: multiply;
+    @apply absolute inset-0 z-[-1];
+  }
+  @screen laptop {
+    @apply overflow-hidden;
+    background-image: var(--bg-desktop);
+    height: calc(34rem * var(--scale));
+
+    &::before {
+      content: "";
+      background: rgba(0,26,87,0.5);
+    }
+  }
+  
+  &-h4{
+    @apply font-nunito font-black text-[2.5rem] leading-[100%] text-white text-center mb-[2rem] w-[85%];
+    @media screen(laptop){
+        font-size: calc(4.2rem * var(--scale));
+        width: calc(110rem * var(--scale));
+        margin-bottom: calc(2.5rem * var(--scale));
+    }
+  }
+}

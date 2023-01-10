@@ -18,11 +18,50 @@
     "subtitle": {
       "type": "string"
     },
-    "form": {
-      "type": "json"
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input-form"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input-form"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input-form"
+    },
+    "service": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input-form"
+    },
+    "message": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.input-form"
+    },
+    "submit": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.submit-form"
     },
     "messages": {
-      "type": "json"
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.messages"
     }
   }
 }

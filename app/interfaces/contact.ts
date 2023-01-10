@@ -1,135 +1,100 @@
-export interface ContactPage {
-  data: ContactData
-  meta: Meta
+export interface Contact {
+  data: ContactData;
+  meta: ContactMeta;
 }
 
 export interface ContactData {
-  title: string
-  subtitle: string
-  form: Form
-  messages: MessagesForm
+  id:          number;
+  title:       string;
+  subtitle:    string;
+  createdAt:   string;
+  updatedAt:   string;
+  publishedAt: string;
+  img:         Img;
+  name:        Email;
+  phone:       Email;
+  email:       Email;
+  service:     Email;
+  message:     Email;
+  submit:      Submit;
+  messages:    Messages;
 }
-export interface Image {
-  url: string
+
+export interface Email {
+  id:          number;
+  name:        string;
+  placeholder: string;
+  label:       string;
 }
-export interface ImageMobile {
-  url: string
+
+export interface Img {
+  id:                number;
+  name:              string;
+  alternativeText:   null;
+  caption:           null;
+  width:             number;
+  height:            number;
+  formats:           Formats;
+  hash:              string;
+  ext:               string;
+  mime:              string;
+  size:              number;
+  url:               string;
+  previewUrl:        null;
+  provider:          string;
+  provider_metadata: null;
+  createdAt:         Date;
+  updatedAt:         Date;
 }
-export interface Form {
-  id: number
-  name: InputForm
-  phone: InputForm
-  service: InputForm
-  message: InputForm
-  submit: Submit
+
+export interface Formats {
+  small:     Small;
+  thumbnail: Small;
+}
+
+export interface Small {
+  ext:    string;
+  url:    string;
+  hash:   string;
+  mime:   string;
+  name:   string;
+  path:   null;
+  size:   number;
+  width:  number;
+  height: number;
+}
+
+export interface Messages {
+  id:                       number;
+  mail_sent_ok:             string;
+  mail_sent_ng:             string;
+  validation_error:         string;
+  spam:                     string;
+  accept_terms:             string;
+  invalid_required:         string;
+  invalid_too_long:         string;
+  invalid_too_short:        string;
+  upload_failed:            string;
+  upload_file_type_invalid: null;
+  upload_file_too_large:    string;
+  upload_failed_php_error:  string;
+  invalid_date:             string;
+  date_too_early:           string;
+  date_too_late:            string;
+  invalid_number:           string;
+  number_too_small:         string;
+  number_too_large:         string;
+  quiz_answer_not_correct:  string;
+  invalid_email:            string;
+  invalid_url:              string;
+  invalid_tel:              string;
 }
 
 export interface Submit {
-  url: string
-  label: string
+  id:    number;
+  url:   string;
+  label: string;
 }
 
-export interface MessagesForm {
-  spam: string
-  invalid_tel: string
-  invalid_url: string
-  invalid_name: string
-  accept_terms: string
-  invalid_date: string
-  mail_sent_ng: string
-  mail_sent_ok: string
-  date_too_late: string
-  invalid_email: string
-  upload_failed: string
-  date_too_early: string
-  invalid_number: string
-  invalid_required: string
-  invalid_too_long: string
-  number_too_large: string
-  number_too_small: string
-  validation_error: string
-  invalid_too_short: string
-  upload_file_too_large: string
-  quiz_answer_not_correct: string
-  upload_failed_php_error: string
-  upload_file_type_invalid: string
-  message_confimation:string
+export interface ContactMeta {
 }
-
-export interface InputForm {
-  id: number
-  label: string
-  placeholder: string
-  name: string
-}
-
-export interface Meta {}
-
-// export interface ContactPage {
-//   data: ContactData;
-//   meta: ContactMeta;
-// }
-
-// export interface ContactData {
-//   id:          number;
-//   title:       string;
-//   subtitle:    string;
-//   createdAt:   Date;
-//   updatedAt:   Date;
-//   publishedAt: Date;
-//   contact:     ContactClass;
-// }
-
-// export interface ContactClass {
-//   id:   number;
-//   form: Form;
-// }
-
-// export interface Form {
-//   name:     Message;
-//   phone:    Message;
-//   submit:   Submit;
-//   message:  Message;
-//   service:  Message;
-//   messages: Messages;
-// }
-
-// export interface Message {
-//   name:        string;
-//   label:       string;
-//   placeholder: string;
-// }
-
-// export interface Messages {
-//   spam:                     string;
-//   invalid_tel:              string;
-//   invalid_url:              string;
-//   accept_terms:             string;
-//   invalid_date:             string;
-//   invalid_name:             string;
-//   mail_sent_ng:             string;
-//   mail_sent_ok:             string;
-//   date_too_late:            string;
-//   invalid_email:            string;
-//   upload_failed:            string;
-//   date_too_early:           string;
-//   invalid_number:           string;
-//   invalid_required:         string;
-//   invalid_too_long:         string;
-//   number_too_large:         string;
-//   number_too_small:         string;
-//   validation_error:         string;
-//   invalid_too_short:        string;
-//   upload_file_too_large:    string;
-//   quiz_answer_not_correct:  string;
-//   upload_failed_php_error:  string;
-//   upload_file_type_invalid: string;
-// }
-
-// export interface Submit {
-//   url:   string;
-//   label: string;
-// }
-
-// export interface ContactMeta {
-// }

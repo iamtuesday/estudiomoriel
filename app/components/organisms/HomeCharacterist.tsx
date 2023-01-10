@@ -1,5 +1,5 @@
 import Image from 'next/future/image'
-import ReactMarkdown from 'react-markdown'
+// import ReactMarkdown from 'react-markdown'
 import { Autoplay, Navigation, Pagination, SwiperOptions } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { HomeCharac } from '../../interfaces'

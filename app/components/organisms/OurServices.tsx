@@ -1,24 +1,24 @@
 import { FC } from 'react'
-import { Service, Titles } from '../../interfaces'
-import { Information } from '../atoms/Information'
+import { HomeService, Service } from '../../interfaces'
 import { Container } from '../globals'
 import { ServicesList } from '../molecules'
+import { Titles } from '../atoms'
+
 
 interface OurServicesProps {
-   titles: Titles
+   service: HomeService
    section: string
-   services: Service[]
 }
 
-export const OurServices: FC<OurServicesProps> = ({ titles, services, section}) => {
-   const {title,subtitle} = titles
+export const OurServices: FC<OurServicesProps> = ({ service, section}) => {
+   const {titles, cardService } = service
    return (
       <section className="OurServices" data-section={section}>
          <Container>
             <div className="OurServices-info">
-               <Information  subtitle={subtitle as string} title={title} />
+               <Titles  title={titles.title} subtitle={titles.subtitle}  />
             </div>
-            <ServicesList services={services} />
+            <ServicesList services={cardService} />
          </Container>
    </section>
    )

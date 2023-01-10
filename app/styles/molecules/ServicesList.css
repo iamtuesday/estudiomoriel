@@ -2,13 +2,11 @@
    @apply flex flex-col gap-[3.2rem] pl-[3.1rem] pr-[2rem];
    margin-top: 2.4rem;
    @media screen(tablet) {
-      @apply grid grid-cols-2;
+      @apply grid grid-cols-3;
    }
    @media screen(laptop) {
-      @apply grid-cols-2 mx-auto ;
+      @apply grid-cols-3 mx-auto ;
       gap: calc(6.6rem * var(--scale));
-      /* column-gap:calc(11.1rem*var(--scale)); */
-      width:75%;
       margin-top: calc(5.5rem * var(--scale));
    }
 }

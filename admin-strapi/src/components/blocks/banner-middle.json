@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_banner_middles",
+  "info": {
+    "displayName": "BannerMiddle"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bg_mob": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

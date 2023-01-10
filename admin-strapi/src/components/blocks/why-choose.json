@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_why_chooses",
+  "info": {
+    "displayName": "WhyChoose"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "list": {
+      "displayName": "ChooseList",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.choose-list"
+    }
+  }
+}

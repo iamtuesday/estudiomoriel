@@ -1,40 +1,26 @@
-const Joi = require("joi");
+const { schema } = require('./validateForm');
 const axios = require("axios");
+
 module.exports = (plugin) => {
   plugin.controllers.submitController = () => ({
     async index(ctx) {
-      let verification = {};
+      let verification = {
+        score: 0
+      };
       let formName =
         strapi.config.get("plugin.ezforms.enableFormName") &&
-        !!ctx.request.body.formName
+          !!ctx.request.body.formName
           ? ctx.request.body.formName
           : "Form";
 
+
       // Form Validation
+      const { error, value } = schema.validate(ctx.request.body.formData, { abortEarly: false });
 
-      const schema = Joi.object({
-        name: Joi.string().min(3).max(30).required(),
-        phone: Joi.string()
-          .required()
-          .pattern(
-            new RegExp(/^(1\s?)?(\d{3}|\(\d{3}\))[\s-]?\d{3}[\s-]?\d{4}$/)
-          )
-          .messages({
-            "string.pattern.base": "Invalid Phone Number.",
-          }),
-        service: Joi.string().required(),
-        message: Joi.string().allow(null, ""),
-        captcha: Joi.string().required()
-      });
-
-      const result = schema.validate(ctx.request.body.formData, {
-        abortEarly: false,
-      });
-
-      if (result.error) {
-        const invalidArgs = result.error.details.map(({ path, message }) => ({
+      if (error) {
+        const invalidArgs = error.details.map(({ path, message, context: { key } }) => ({
           path: path[0],
-          message,
+          message
         }));
 
         return ctx.badRequest(
@@ -42,14 +28,18 @@ module.exports = (plugin) => {
           invalidArgs
         );
       }
-      //captcha
-      const { data } = await axios.post(
-        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${ctx.request.body.formData.captcha}`
+
+      // Captcha Validation
+      const { data: { success } } = await axios.post(
+        `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${ctx.request.body.formData.token}`
       );
-      console.log(data)
-      if (!data.success) {
-        return ctx.badRequest("Captcha fail validation.");
+
+      if (success === false) {
+        return ctx.badRequest(
+          "The recaptcha token is invalid."
+        );
       }
+
       //sends notifications
       for (const provider of strapi.config.get(
         "plugin.ezforms.notificationProviders"
@@ -60,19 +50,16 @@ module.exports = (plugin) => {
               .plugin("ezforms")
               .service(provider.name)
               .send(provider.config, formName, ctx.request.body.formData);
-            // return {
-            //   status: "OK",
-            // };
           } catch (e) {
             strapi.log.error(e);
-            return ctx.internalServerError("A Whoopsie Happened", e);
+            ctx.internalServerError("A Whoopsie Happened", e);
           }
         }
       }
 
       // Adds to DB
       let parsedScore = verification.score || -1;
-      delete ctx.request.body.formData.captcha;
+      delete ctx.request.body.formData.token;
       try {
         await strapi.query("plugin::ezforms.submission").create({
           data: {
@@ -85,30 +72,30 @@ module.exports = (plugin) => {
         strapi.log.error(e);
         return ctx.internalServerError("A Whoopsie Happened", e);
       }
+      return (ctx.body = ctx.request.body.formData);
 
-      return {
-        message: "Thank you for your message. It has been sent.",
-      };
+
     },
   });
 
   plugin.services.formatData = () => ({
     formatData(data) {
-      const { name, phone, service, message } = data;
+      const { name, email, phone, service, message } = data;
 
       const body = `
       <br>
-      From: ${name} <br>
-      Subject: Contact Form / Window Tinting<br>
+      From: ${name} - ${email} <br>
+      Subject: Contact Form / Estudio Moriel <br>
       <br>
       Contact Info--- <br>
       Name: ${name} <br>
+      Email: ${email} <br>
       Phone: ${phone}<br>
       Service: ${service}<br>
       Message: ${message}<br>
       <br>
       --
-      This e-mail was send from a contact form on Window Tinting
+      This e-mail was send from a contact form on   Estudio Moriel  (<a href="https://facebook.com" target="_blank">facebook.com</a>)
       `;
 
       return body;

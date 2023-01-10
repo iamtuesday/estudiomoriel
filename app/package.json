@@ -11,15 +11,17 @@
   "dependencies": {
     "axios": "1.1.0",
     "fslightbox-react": "1.6.2-2",
+    "markdown-it": "^13.0.1",
     "next": "12.3.1",
     "react": "18.2.0",
+    "react-dimmer": "^1.0.7",
     "react-dom": "18.2.0",
     "react-google-recaptcha": "^2.1.0",
-    "react-markdown": "^8.0.4",
     "swiper": "8.4.3"
   },
   "devDependencies": {
     "@types/fslightbox-react": "1.4.2",
+    "@types/markdown-it": "^12.2.3",
     "@types/node": "18.8.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
