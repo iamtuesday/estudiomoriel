@@ -21,7 +21,7 @@ export const BannerRedirect: FC<BannerMiddleProps> = ({ banner }) => {
       />
 
       <div className="bannerDeudas-btn">
-        <Button variant="default">{label}</Button>
+        <Button variant="default" to="/abogada-en-deudas-bancarias">{label}</Button>
       </div>
     </div>
   );

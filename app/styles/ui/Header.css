@@ -28,13 +28,13 @@
   }
 
   &-logo {
-    @apply left-[3rem]   w-[9rem] absolute top-[1rem] bg-white pb-[1rem] px-[1rem];
+    @apply left-[3rem]   w-[7rem] absolute top-[1rem] bg-white pb-[1rem] px-[1rem];
     border-radius: 0px 0px 10px 10px;
     @screen laptop {
       @apply relative;
       left: calc(21rem * var(--scale));
       top: calc(6rem * var(--scale));
-      width: calc(16rem * var(--scale));
+      width: calc(12rem * var(--scale));
     }
   }
 

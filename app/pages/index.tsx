@@ -23,38 +23,34 @@ interface HomeProps {
 }
 
 const HomePage: NextPage<HomeProps> = ({ home, contact }) => {
-  const { setElements, entries } = useObserver({
-    rootMargin: "-13% -0px -60% 0px",
-  });
-  const { setActiveSection, scrollToSectionFromContact, serviceSelected } =
-    useNavbarContext();
+  const { setActiveSection, scrolltoSectionFromContact } = useNavbarContext()
+  const { setElements, entries } = useObserver({ rootMargin: '-13% 0px -80% 0px' })
+
   useEffect(() => {
-    const elements = document.querySelectorAll("[data-section]");
-    setElements(elements);
-  }, [setElements]);
+    const elements = document.querySelectorAll('[data-section]')
+    setElements(elements)
+  }, [setElements])
 
   useEffect(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const section = entry.target.getAttribute("data-section");
+        const section = entry.target.getAttribute('data-section')
 
         // if (section === '#form') return
 
-        setActiveSection(String(section));
+        setActiveSection(String(section))
       }
-    });
-  }, [entries, setActiveSection]);
+    })
+  }, [entries, setActiveSection])
+  useEffect(() => {
+    if (scrolltoSectionFromContact) {
+      goToSection(scrolltoSectionFromContact)
+    }
+  }, [scrolltoSectionFromContact])
 
   return (
     <main className=" main-page">
-      {/* <Contact
-        title={contact.title}
-        subtitle={contact.subtitle}
-        form={contact.form}
-        services={home.HomeService.cardService}
-        messages={contact.messages}
-        section="/contact"
-      /> */}
+
       <HomeBanner bannerPrin={home.HomeBanner} section="/" />
 
       <HomeCharacterist characteristic={home.characteristic} />

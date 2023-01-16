@@ -123,6 +123,7 @@
       background: #5d84ff !important;
     }
     @media screen(laptop) {
+      @apply flex items-center cursor-pointer;
       font-size: calc(1.9rem * var(--scale));
       border-radius: 5px;
       gap: 0.9em;
@@ -139,12 +140,6 @@
       }
     }
 
-    i {
-      @apply hidden text-content;
-      @media screen(laptop) {
-        font-size: calc(1.5rem * var(--scale));
-        @apply block;
-      }
-    }
+  
   }
 }

@@ -65,6 +65,12 @@
     },
     "map": {
       "type": "richtext"
+    },
+    "whatsapp": {
+      "type": "string"
+    },
+    "whatsapp_url": {
+      "type": "string"
     }
   }
 }

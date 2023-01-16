@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "deudas",
+  "info": {
+    "singularName": "deuda",
+    "pluralName": "deudas",
+    "displayName": "Deuda"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "videos": {
+      "displayName": "Videos",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.videos"
+    },
+    "aboutme": {
+      "displayName": "AboutMe",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.about-me"
+    },
+    "blog": {
+      "displayName": "BlogDeudas",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.blog-deudas"
+    }
+  }
+}

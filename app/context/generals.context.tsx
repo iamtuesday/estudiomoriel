@@ -35,6 +35,8 @@ const initialState: ControllerState = {
     email: '',
     address: '',
     url_map: '',
+    whatsapp: '',
+    whatsapp_url: '',
     logo: {
       name: '',
       width: 0,

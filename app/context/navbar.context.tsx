@@ -7,10 +7,10 @@ interface NavbarContextType {
    setFormServiceValue: Dispatch<SetStateAction<string>>
    isHeaderWhite: boolean
    setIsHeaderWhite: Dispatch<SetStateAction<boolean>>
-   scrollToSectionFromContact: string;
-   setScrollToSectionFromContact: Dispatch<SetStateAction<string>>;
-   serviceSelected: string;
-   setServiceSelected: Dispatch<SetStateAction<string>>;
+   serviceSelected: string
+   setServiceSelected: Dispatch<SetStateAction<string>>
+   scrolltoSectionFromContact: string
+   setscrolltoSectionFromContact: Dispatch<SetStateAction<string>>
 }
 
 const NavbarContext = createContext<NavbarContextType>({
@@ -18,12 +18,12 @@ const NavbarContext = createContext<NavbarContextType>({
    setActiveSection: () => '',
    formServiceValue: '',
    setFormServiceValue: () => '',
-   serviceSelected: '',
-   setServiceSelected: () => '',
    isHeaderWhite: false,
    setIsHeaderWhite: () => '',
-   scrollToSectionFromContact: "",
-   setScrollToSectionFromContact: () => "",
+   serviceSelected: '',
+   setServiceSelected: () => '',
+   scrolltoSectionFromContact: '',
+   setscrolltoSectionFromContact: () => '',
 })
 
 export const NavbarProvider: FC<PropsWithChildren> = ({ children }) => {
@@ -31,7 +31,7 @@ export const NavbarProvider: FC<PropsWithChildren> = ({ children }) => {
    const [formServiceValue, setFormServiceValue] = useState<string>('')
    const [isHeaderWhite, setIsHeaderWhite] = useState<boolean>(false)
    const [serviceSelected, setServiceSelected] = useState<string>('')
-   const [scrollToSectionFromContact, setScrollToSectionFromContact] = useState<string>("");
+   const [scrolltoSectionFromContact, setscrolltoSectionFromContact] = useState<string>('')
    return (
       <NavbarContext.Provider
          value={{
@@ -43,8 +43,8 @@ export const NavbarProvider: FC<PropsWithChildren> = ({ children }) => {
             setIsHeaderWhite,
             serviceSelected,
             setServiceSelected,
-            scrollToSectionFromContact,
-            setScrollToSectionFromContact,
+            scrolltoSectionFromContact,
+            setscrolltoSectionFromContact,
          }}
       >
          {children}
