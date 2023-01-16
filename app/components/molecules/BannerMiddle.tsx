@@ -24,7 +24,7 @@ export const BannerMiddle: FC<BannerPrinProps> = ({ banner_middle }) => {
       <h4 className="BannerMiddle-h4" dangerouslySetInnerHTML={{ __html: content }} />
 
       <div className="BannerMiddle-btn">
-        <Button variant="secondary">{polylang.lbl_book_now}</Button>
+        <Button variant="secondary">{polylang.lbl_contact_us}</Button>
       </div>
     </div>
   );

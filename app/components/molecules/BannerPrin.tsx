@@ -30,7 +30,7 @@ export const BannerPrin: FC<BannerPrinProps> = ({
                 />
 
                 <div className="banner-prin__btn">
-                    <Button variant="secondary">{polylang.lbl_book_now}</Button>
+                    <Button variant="secondary">{polylang.lbl_contact_us}</Button>
                 </div>
             </div>
 

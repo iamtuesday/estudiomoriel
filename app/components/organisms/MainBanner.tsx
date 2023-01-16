@@ -44,8 +44,8 @@ export const MainBanner: FC<MainBannerProps> = ({
                 className="MainBanner-p"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
-              <div className="MainBanner-btns">
-                <Button onClick={() => goToSection('/service')} style="primary">
+              <div className="MainBanner-btns" onClick={() => goToSection('/service')} >
+                <Button variant="primary">
                   {polylang.lbl_see_services}
                 </Button>
               </div>

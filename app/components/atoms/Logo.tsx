@@ -10,11 +10,11 @@ interface LogoProps {
 }
 export const Logo: FC<LogoProps> = ({ type }) => {
   const { polylang } = useGenerals()
-  const { activeSection, isHeaderWhite, setScrollToSectionFromContact,setServiceSelected } =
+  const { activeSection, isHeaderWhite, setscrolltoSectionFromContact,setServiceSelected } =
     useNavbarContext()
   const router = useRouter()
   const handleGoToSection = () => {
-    setScrollToSectionFromContact('/')
+    setscrolltoSectionFromContact('/')
     setServiceSelected('')
   }
 

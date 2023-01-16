@@ -5,7 +5,7 @@ export const useButton = () => {
    const { polylang: meta, polylang } = useGenerals()
    useEffect(() => {
       const polylang = {
-         sms: meta.lbl_number || '', // Sms phone number
+         sms: meta.whatsapp || '', // Sms phone number
          facebook: meta.facebook_id || '', // Facebook page ID
          //COMENTE ESTO
          // call_to_action: polylang.message_cta || '', // Call to action
