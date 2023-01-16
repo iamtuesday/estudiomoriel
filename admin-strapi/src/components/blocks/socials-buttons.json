@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_socials_buttons",
+  "info": {
+    "displayName": "SocialsButtons"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

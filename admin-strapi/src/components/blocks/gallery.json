@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_galleries",
+  "info": {
+    "displayName": "Gallery"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "img_zoom": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

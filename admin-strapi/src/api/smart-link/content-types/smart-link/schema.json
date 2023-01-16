@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "smart_links",
+  "info": {
+    "singularName": "smart-link",
+    "pluralName": "smart-links",
+    "displayName": "SmartLink"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "appearance": {
+      "displayName": "Appearance",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.appearance"
+    },
+    "buttons": {
+      "displayName": "SocialsButtons",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.socials-buttons"
+    },
+    "tab": {
+      "displayName": "Tab",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.tab"
+    },
+    "gallery": {
+      "displayName": "Gallery",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.gallery"
+    }
+  }
+}

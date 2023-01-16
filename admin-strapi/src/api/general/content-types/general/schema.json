@@ -15,13 +15,7 @@
     "lbl_see_services": {
       "type": "string"
     },
-    "lbl_send": {
-      "type": "string"
-    },
-    "lbl_book_now": {
-      "type": "string"
-    },
-    "lbl_number": {
+    "lbl_contact_us": {
       "type": "string"
     },
     "logo": {

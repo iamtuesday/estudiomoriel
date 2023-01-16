@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_tabs",
+  "info": {
+    "displayName": "Tab"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

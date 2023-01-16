@@ -26,9 +26,7 @@ const initialState: ControllerState = {
   polylang: {
     // id:               0;
     lbl_see_services: '',
-    lbl_send: '',
-    lbl_book_now: '',
-    lbl_number: '',
+    lbl_contact_us: '',
     tag_manager:'',
     facebook_id:'',
     pixel_facebook:'',

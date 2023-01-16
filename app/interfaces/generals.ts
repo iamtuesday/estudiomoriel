@@ -5,9 +5,7 @@ export interface Polylang {
 
 export interface PolylangData {
   lbl_see_services: string;
-  lbl_send: string;
-  lbl_book_now: string;
-  lbl_number: string;
+  lbl_contact_us: string;
   tag_manager: string;
   pixel_facebook: string;
   facebook_id: string;
