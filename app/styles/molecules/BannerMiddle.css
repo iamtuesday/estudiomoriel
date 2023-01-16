@@ -8,7 +8,7 @@
   background-size: cover;
   &::before {
     content: "";
-    background: rgba(0,26,87,0.5);
+    background: rgba(0,26,87,0.8);
     mix-blend-mode: multiply;
     @apply absolute inset-0 z-[-1];
   }
@@ -19,7 +19,8 @@
 
     &::before {
       content: "";
-      background: rgba(0,26,87,0.5);
+      /* background: rgba(0,26,87,0.5); */
+      background: rgba(0,26,87,0.8);
     }
   }
   

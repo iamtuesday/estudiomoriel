@@ -13,6 +13,7 @@
   &::after {
     @apply absolute inset-0 bg-secondary;
     /* background:#5D84FF; */
+    background: rgba(0,26,87,0.8);
     mix-blend-mode: multiply;
     z-index: -1;
     content: '';

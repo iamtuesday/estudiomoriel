@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps<CustomPageProps>) {
   return (
     <>
       <Head>
-        <title>JF WINDOW TINTING`</title>
+        <title>Estudio Moriel</title>
         <Favicon />
       </Head>
       <GeneralsProvider generals={pageProps.generals}>

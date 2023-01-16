@@ -5,4 +5,5 @@ export * from './MainBanner'
 export * from './OurServices'
 export * from './HomeCharacterist'
 export * from './HomeBanner'
-
+export * from './BannerDeudas'
+export * from './HomeWhyChoose'

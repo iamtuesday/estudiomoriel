@@ -51,7 +51,8 @@
       letter-spacing: 0.05em;
       font-size: calc(1.7rem * var(--scale));
       gap: calc(5.4rem * var(--scale));
-      left:calc(3rem*var(--scale));
+      left: calc(3rem * var(--scale));
+      
       width: 100%;
     }
   }
@@ -62,7 +63,7 @@
     @apply px-12 relative flex flex-row;
     &::after {
       @apply absolute bg-secondary;
-      content: '';
+      content: "";
       bottom: calc(-1rem * var(--scale));
       opacity: 0;
       left: 50%;
@@ -73,10 +74,10 @@
       border-radius: 1rem;
     }
     &::before {
-      content: '/';
+      content: "/";
       @apply absolute font-medium;
-      right:calc(-3rem*var(--scale));
-      font-size:calc(1.8rem*var(--scale));
+      right: calc(-3rem * var(--scale));
+      font-size: calc(1.8rem * var(--scale));
     }
     &.isActive {
       @apply font-bold;
@@ -97,17 +98,16 @@
       }
     }
   }
-  &-li:nth-child(5){
-    &::before{
-      content:'';
-      
+  &-li:nth-child(5) {
+    &::before {
+      content: "";
     }
   }
   .btn-number {
     @apply hidden;
     @screen laptop {
       @apply block text-[#FF5C00] relative;
-      padding:calc(.75rem*var(--scale)) calc(2.6rem*var(--scale));
+      padding: calc(0.75rem * var(--scale)) calc(2.6rem * var(--scale));
       left: calc(12.5rem * var(--scale));
       border: 1px solid #ff5c00;
       border-radius: 5px;

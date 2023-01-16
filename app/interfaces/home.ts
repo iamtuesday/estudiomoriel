@@ -19,6 +19,28 @@ export interface HomeData {
   HomeBlog: HomeBlog;
   banner_middle: BannerMid;
   seo: MetaSEO;
+  banner_deudas: BannerDeudas;
+  choose: Choose;
+}
+
+export interface Choose {
+  id: number;
+  title: string;
+  list: ChooseList[];
+}
+
+export interface ChooseList {
+  id: number;
+  title: string;
+  content: string;
+  icon: ImgMobile;
+}
+
+export interface BannerDeudas {
+  id: number;
+  title: string;
+  content: string;
+  label: string;
 }
 
 export interface BannerMid {

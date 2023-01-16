@@ -1,0 +1,33 @@
+.bannerDeudas {
+  @apply bg-primary;
+  @apply px-[2.2rem] p-[2.5rem] flex flex-col gap-[1.5rem];
+  @media screen(laptop) {
+    @apply grid grid-cols-[25%_55%_20%] items-center;
+    padding: calc(4rem * var(--scale)) calc(20rem * var(--scale));
+    gap: calc(4rem * var(--scale));
+  }
+
+  &-title {
+    @apply font-nunito text-white font-bold leading-[150%] text-[2.2rem];
+    @media screen(laptop) {
+      font-size: calc(3rem * var(--scale));
+    }
+  }
+
+  &-content {
+    @apply font-nunito text-white font-light leading-[150%] text-[1.6rem] rounded-[.5rem] relative;
+    @media screen(laptop) {
+      font-size: calc(1.85rem * var(--scale));
+      padding-left: calc(6rem * var(--scale));
+
+      &::before {
+        content: "";
+        @apply absolute left-0 top-[0.2rem] rounded-[.5rem] bg-[#9ca6bc] w-[.4rem] h-[93%];
+      }
+    }
+  }
+
+  &-btn{
+    @apply flex justify-center;
+  }
+}

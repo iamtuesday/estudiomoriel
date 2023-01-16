@@ -1,70 +1,35 @@
-.Contact-Wrapper{
-  @apply w-full relative bg-white isolate pt-[3rem] px-[.7rem] pb-[7.8rem];
-  background-image: url('/img/bg-contact.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  /* @media screen(tablet){
-      @apply px-[15%];
-  } */
-
-  @media screen(laptop){
-      background-image: url('/img/bg-contact.png');
-     padding: calc(12.9rem * var(--scale)) calc(22rem * var(--scale));
-  }
-}
-.Contact{
-  @apply  bg-transparent px-[2.4rem] pt-[5.8rem] pb-[6.9rem];
-
-  @media screen(tablet){
-      @apply p-[4rem] py-[5rem];
+.Contact {
+  @apply bg-transparent px-[2.4rem] pt-[5.8rem] pb-[6.9rem] ;
+  @media screen(tablet) {
+    @apply p-[4rem] py-[5rem];
   }
 
-  @media screen(laptop){
-      @apply grid grid-cols-2;
-      /* padding: calc(13.9rem * var(--scale)) calc(8.2rem * var(--scale)); */
-      gap: calc(9.7rem * var(--scale));
-
+  @media screen(laptop) {
+    @apply flex flex-col;
+    gap: calc(5rem * var(--scale));
   }
 
-  &-Text{
-      @apply hidden;
-      @media screen(laptop){
-          @apply block font-roboto font-light text-[1.2rem] leading-[180%] text-content;
-          font-size: calc(2rem * var(--scale));
-          margin: calc(2.5rem * var(--scale)) 0;
-      }
-  }
-  &-ul{
-      @apply hidden;
-      @media screen(laptop){
-          @apply block;
-          @apply flex flex-col;
-          gap: calc(2rem * var(--scale));
-      }
+  &-info {
+    @media screen(laptop) {
+        @apply grid grid-cols-2 justify-center text-center;
+    }
   }
 
-  &-h2{
-      @apply block font-roboto font-semibold leading-[1] text-[#252525];
-      font-size: calc(1.7rem * var(--scale));
-      margin-top: calc(.5rem * var(--scale));
+  &-top{
+    @apply pb-[2rem];
+    @media screen(laptop) {
+        @apply p-0;
+    }
   }
 
-  &-p{
-      @apply block font-roboto font-light leading-[150%] text-content;
-      font-size: calc(1.9rem * var(--scale));
-
-  }
-
-  &-li{
-      @apply grid grid-cols-[20%_80%];
-  }
-
-  &-form{
-      @apply mt-[3rem];
-      @media screen(laptop){
-          @apply m-0;
-      }
+  &-bottom {
+    @apply flex flex-col gap-[4rem];
+    @media screen(laptop) {
+        @apply bg-primary grid grid-cols-[60%_40%] justify-center mx-auto rounded-[1rem] gap-[2rem];
+      box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 8%);
+      width: calc(110rem* var(--scale));
+      padding: calc(5rem * var(--scale));
+      gap: calc(5rem * var(--scale));
+    }
   }
 }

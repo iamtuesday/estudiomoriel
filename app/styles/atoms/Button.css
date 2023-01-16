@@ -1,6 +1,6 @@
 .btn {
   &-default {
-    @apply font-roboto text-[1.5rem] leading-[1] text-white font-semibold rounded-[.5rem] bg-transparent px-[2.2rem] py-[1.6rem];
+    @apply font-nunito text-[1.5rem] leading-[1] text-[#25327B] font-semibold rounded-[.5rem] bg-white px-[2.2rem] py-[1.6rem];
     border: 0.17rem solid #fff;
     transition: all ease-in-out 0.35s;
 
@@ -11,7 +11,7 @@
     }
 
     &:hover {
-      @apply bg-white text-[#25327B];
+      @apply bg-transparent text-white;
     }
   }
 

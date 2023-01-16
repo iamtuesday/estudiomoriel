@@ -48,9 +48,12 @@
 
    &-i {
       font-size: 1.6rem;
+      
 
       @media screen(laptop) {
          font-size: calc(2rem * var(--scale));
+         margin-top: calc(1.5rem * var(--scale));
+
       }
    }
 }

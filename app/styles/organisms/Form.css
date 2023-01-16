@@ -1,86 +1,96 @@
-.Form{
+.Form {
   @apply flex flex-col gap-[2.9rem];
 
-    &-Error{
-        @apply text-red-500;
-        font-size: calc(1.7rem * var(--scale));
-        &::before {
-            display: inline;
-            content: "⚠ ";
-          }
+  &-Error {
+    @apply text-red-500;
+    font-size: calc(1.7rem * var(--scale));
+    &::before {
+      display: inline;
+      content: "⚠ ";
     }
+  }
 
-    
-    &-btn{
-      @apply font-poppins text-[1.5rem] leading-[1] text-white font-semibold rounded-[.37rem]  bg-[#25327B] py-[1.8rem] px-[2.2rem];
-      /* border: .17rem solid #25327B; */
-      transition: all ease-in-out .35s;
-  
-  
-     @screen laptop {
-      @apply rounded-[.5rem] bg-transparent text-[#25327B];
+  &-btn {
+    @apply font-nunito text-[1.5rem] leading-[1] text-white font-semibold rounded-[.37rem] uppercase bg-primary py-[1.8rem] px-[2.2rem];
+    transition: all ease-in-out 0.35s;
+
+    @screen laptop {
+      @apply rounded-[.5rem] bg-white text-primary;
       font-size: calc(2rem * var(--scale));
-      border: .2rem solid #25327B;
+      /* border: 0.2rem solid #25327b; */
       padding: calc(2rem * var(--scale)) calc(3rem * var(--scale));
-     }
-  
-     &:hover {
-      @apply bg-[#25327B] text-white;
-     }
-  
     }
 
-  @media screen(laptop){
-      @apply grid grid-cols-2;
+    &:hover {
+      @apply bg-black text-white;
+    }
+  }
+
+  @media screen(laptop) {
+    @apply grid grid-cols-2;
   }
 }
 
+.Text-Field {
+  label {
+    @apply font-roboto font-normal text-white text-[1.6rem] leading-[180%] uppercase;
+    @media screen(laptop) {
+      font-size: calc(1.9rem * var(--scale));
+    }
+  }
 
-.Text-Field{
-    label{
-        @apply font-roboto font-normal text-[#252525] text-[1.6rem] leading-[180%] uppercase;
-        @media screen(laptop){
-            font-size: calc(1.9rem * var(--scale));
-        }
+  input {
+    @apply h-[3.5rem]  bg-transparent text-white;
+    border-bottom: 0.2rem solid #6b6b6b;
+    /* opacity: 0.7; */
+    &::placeholder {
+      @apply text-[#252525] font-nunito;
+    }
+    @media screen(laptop) {
+      height: calc(3rem * var(--scale));
+      &::placeholder {
+        @apply text-white ;
+      }
     }
 
-    input {
-        @apply h-[3.5rem]  bg-transparent;
-        border-bottom:.2rem solid #6B6B6B;
-        opacity: 0.7;
-        @media screen(laptop){
-         height: calc(3rem * var(--scale));
-        }
-    }
-    
-    textarea {
-        @apply font-roboto font-light text-content h-[10.4rem] bg-transparent;
-        border-bottom:.2rem solid #6B6B6B;
-        opacity: 0.7;
-        @media screen(laptop){
-            padding: calc(.8rem * var(--scale)) calc(1.2rem * var(--scale));
-            height: calc(10.3rem * var(--scale));
-            font-size: calc(1.7rem * var(--scale));  
-        }
-    }
+  }
 
+  textarea {
+    @apply font-nunito font-normal  text-white h-[10.4rem] bg-transparent;
+    border-bottom: 0.2rem solid #6b6b6b;
+    &::placeholder {
+      @apply text-[#252525] font-nunito;
+    }
+    @media screen(laptop) {
+      padding: calc(0.8rem * var(--scale)) 0;
+      height: calc(10.3rem * var(--scale));
+      font-size: calc(1.9rem * var(--scale));
+      &::placeholder {
+        @apply text-white font-nunito;
+      }
+    }
+ 
+  }
 }
-.select{
-  label{
-      @apply font-roboto font-normal text-[#252525] text-[1.6rem] leading-[180%] uppercase;
-        @media screen(laptop){
-            font-size: calc(1.9rem * var(--scale));
-        }
+.select {
+  label {
+    @apply font-nunito font-normal text-[#252525] text-[1.6rem] leading-[180%] uppercase;
+    @media screen(laptop) {
+      font-size: calc(1.9rem * var(--scale));
+    }
   }
   select {
-      @apply  bg-transparent;
-      /* height: calc(3rem * var(--scale)); */
+    @apply bg-transparent font-nunito text-[#252525];
+    /* height: calc(3rem * var(--scale)); */
     -webkit-appearance: none;
-    border-bottom:.2rem solid rgba(107,107,107, 0.7); 
+    border-bottom: 0.2rem solid rgba(107, 107, 107, 0.7);
+
+    @media screen(laptop) {
+      @apply text-white font-nunito;
+    }
   }
 
-  .icon-arrow-select{
-    @apply absolute right-[5%] top-[2rem] cursor-pointer text-content text-[.7rem];
+  .icon-arrow-select {
+    @apply absolute right-[5%] top-[2rem] cursor-pointer text-[#252525] text-[.7rem];
   }
-
- }
+}

@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { useEffect } from "react";
 import { SeoEngine } from "../components/globals";
-import { OurServices } from "../components/organisms";
+import { BannerRedirect, OurServices } from "../components/organisms";
 import About from "../components/organisms/HomeAbout";
 import Characterist from "../components/organisms/HomeCharacterist";
 import { HomeBlog } from "../components/organisms/HomeBlog";
@@ -15,6 +15,7 @@ import { goToSection } from "../lib/utils";
 import HomeCharacterist from "../components/organisms/HomeCharacterist";
 import { BannerMiddle } from "../components/molecules";
 import { HomeContact, HomeBanner } from "./../components/organisms";
+import HomeWhyChoose from "../components/organisms/HomeWhyChoose";
 
 interface HomeProps {
   home: HomeData;
@@ -54,7 +55,7 @@ const HomePage: NextPage<HomeProps> = ({ home, contact }) => {
         messages={contact.messages}
         section="/contact"
       /> */}
-      <HomeBanner bannerPrin={home.HomeBanner} />
+      <HomeBanner bannerPrin={home.HomeBanner} section="/" />
 
       <HomeCharacterist characteristic={home.characteristic} />
 
@@ -63,6 +64,10 @@ const HomePage: NextPage<HomeProps> = ({ home, contact }) => {
       <BannerMiddle banner_middle={home.banner_middle} />
 
       <OurServices service={home.HomeService} section="services" />
+
+      <BannerRedirect banner={home.banner_deudas}/>
+
+      <HomeWhyChoose choose={home.choose} section="why" />
 
       <HomeContact
         email={contact.email}
@@ -75,6 +80,7 @@ const HomePage: NextPage<HomeProps> = ({ home, contact }) => {
         service={contact.service}
         services={home.HomeService.cardService}
         messages={contact.messages}
+        img={contact.img}
         section="contact"
       />
 

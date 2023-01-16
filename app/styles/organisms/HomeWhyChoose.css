@@ -1,0 +1,40 @@
+.HomeWhyChoose{
+    @apply px-[2.2rem] py-[4rem];
+    @media screen(laptop){
+        padding: calc(10rem * var(--scale)) calc(25rem * var(--scale));
+    }
+
+    &-ul{
+        @apply flex flex-col items-center gap-[3rem];
+        @media screen(laptop){
+            @apply grid grid-cols-3 justify-center text-center;
+            gap: calc(5rem * var(--scale));
+            margin-top: calc(5rem * var(--scale))
+        } 
+    }
+
+   
+
+    
+    &-li{
+        @apply flex flex-col items-center text-center;
+        @media screen(laptop){
+            gap: calc(1rem * var(--scale));
+        } 
+    }
+
+    &-img{
+        @media screen(laptop){
+            @apply flex justify-center;
+        } 
+    }
+
+    &-p{
+        @apply text-content font-roboto font-light leading-[150%] text-[1.5rem];
+        @media screen(laptop){
+            @apply w-[80%] mx-auto;
+            font-size: calc(1.75 * var(--scale));
+        } 
+    }
+
+}

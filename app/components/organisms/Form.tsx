@@ -51,13 +51,14 @@ export const Form: FC<FormProps> = ({ name, phone, email, message, submit, messa
         <form className="Form" onSubmit={handleSubmit}>
             {/* Names */}
             <div className="Text-Field">
-                <label htmlFor={name.name}>{name.label}</label>
+                {/* <label htmlFor={name.name}>{name.label}</label> */}
                 <input value={formState.name}
                     onInput={validateInput}
                     name={name.name}
                     id={name.name}
                     type="text"
                     className="Text-Input"
+                    placeholder={name.placeholder}
                 />
                 {errors.name && <p className="Form-Error">{errors.name}</p>}
             </div>
@@ -65,26 +66,28 @@ export const Form: FC<FormProps> = ({ name, phone, email, message, submit, messa
 
             {/* Phone Number */}
             <div className="Text-Field">
-                <label htmlFor={phone.name}>{phone.label}</label>
+                {/* <label htmlFor={phone.name}>{phone.label}</label> */}
                 <input value={formState.phone}
                     onInput={validateInput}
                     name={phone.name}
                     id={phone.name}
                     type="text"
                     className="Text-Input"
+                    placeholder={phone.placeholder}
                 />
                 {errors.phone && <p className="Form-Error">{errors.phone}</p>}
             </div>
 
             {/* Email */}
             <div className="Text-Field">
-                <label htmlFor={email.name}>{email.label}</label>
+                {/* <label htmlFor={email.name}>{email.label}</label> */}
                 <input value={formState.email}
                     onInput={validateInput}
                     name={email?.name}
                     id={email?.name}
                     type="email"
                     className="Text-Input"
+                    placeholder={email.placeholder}
                 />
                 {errors.email && <p className="Form-Error">{errors.email}</p>}
             </div>
@@ -92,9 +95,9 @@ export const Form: FC<FormProps> = ({ name, phone, email, message, submit, messa
 
             {/* Select Service */}
             <div className="relative Text-field select">
-                <label htmlFor={service.name}>{service.label}</label>
+                {/* <label htmlFor={service.name}>{service.label}</label> */}
                 <select value={formState.service} name={service?.name} onInput={validateSelect} id={service?.name}>
-                    <option value="" disabled></option>
+                    <option value="" disabled>{service.placeholder}</option>
                     {services.map(({ title }, i) => (
                         <option key={i} value={convertToSlug(title)}>
                             {title}
@@ -108,13 +111,14 @@ export const Form: FC<FormProps> = ({ name, phone, email, message, submit, messa
 
             {/* Message */}
             <div className="Text-Field md:col-span-2">
-                <label htmlFor={message.name}>{message.label}</label>
+                {/* <label htmlFor={message.name}>{message.label}</label> */}
                 <textarea
                     value={formState.message}
                     name={message.name}
                     onInput={handleInput}
                     id={message.name}
                     className="Text-Textarea"
+                    placeholder={message.placeholder}
                 ></textarea>
             </div>
 

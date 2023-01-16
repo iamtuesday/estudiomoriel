@@ -13,9 +13,10 @@ import "swiper/css/effect-fade";
 
 interface HomeBannerProps {
     bannerPrin: Banner[];
+    section: string;
 }
 
-export const HomeBanner: FC<HomeBannerProps> = ({ bannerPrin }) => {
+export const HomeBanner: FC<HomeBannerProps> = ({ bannerPrin, section }) => {
     const swiperOptions: SwiperOptions = {
         slidesPerView: "auto",
         effect: "fade",
@@ -50,7 +51,7 @@ export const HomeBanner: FC<HomeBannerProps> = ({ bannerPrin }) => {
     };
 
     return (
-        <div className="HomeBanner">
+        <div className="HomeBanner" data-section={section}>
             <Swiper {...swiperOptions}>
                 {bannerPrin.map((item, index) => (
                     <SwiperSlide key={index}>
