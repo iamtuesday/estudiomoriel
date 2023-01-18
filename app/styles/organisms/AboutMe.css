@@ -1,0 +1,32 @@
+.AboutMe {
+  @apply bg-primary py-[4rem];
+  @media screen(laptop) {
+    padding: calc(5rem * var(--scale));
+    margin-bottom: calc(10rem * var(--scale));
+  }
+
+  &-ctn {
+    @media screen(laptop) {
+      @apply grid grid-cols-[70%_30%] items-center;
+      gap: calc(10rem * var(--scale));
+      /* place-content: center;*/
+    }
+  }
+
+  &-right .Titles-White .Titles-h2 {
+    @apply text-white font-nunito text-center;
+  }
+
+  &-left {
+    @apply pt-[5rem] flex justify-center;
+    @media screen(laptop) {
+    @apply p-0;}
+  }
+
+  &-content p {
+    @apply text-white font-nunito text-[1.6rem] text-center;
+    @media screen(laptop) {
+      font-size: cacl(1.85rem * var(--scale));
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.VideoList {
+  @apply px-[2.2rem] py-[5rem];
+  @media screen(laptop) {
+    padding: calc(10rem * var(--scale)) calc(20rem * var(--scale));
+  }
+  &-List {
+    @apply flex flex-col gap-[2.5rem];
+    @media screen(laptop) {
+      @apply grid grid-cols-3;
+      gap: calc(8rem * var(--scale));
+    }
+  }
+
+  &-Item {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    iframe {
+      @apply w-full;
+      @media screen(laptop) {
+        @apply h-auto;
+        width: calc(45rem * var(--scale));
+        height: calc(25rem * var(--scale));
+      }
+    }
+  }
+
+  &-Content {
+    @apply font-nunito text-center p-[2rem];
+    @media screen(laptop) {
+      padding: calc(2.5rem * var(--scale));
+    }
+  }
+}

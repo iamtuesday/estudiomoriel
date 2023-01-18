@@ -45,14 +45,14 @@
   &-ul {
     margin-top: 1.6rem;
     font-size: 1.8rem;
-    @apply font-normal flex flex-col text-[#ffffff];
+    @apply font-normal flex flex-col text-[#ffffff] cursor-pointer;
     @media screen(laptop) {
       @apply flex flex-row m-0 font-normal mr-auto font-roboto h-full items-center relative  text-title  uppercase justify-center;
       letter-spacing: 0.05em;
       font-size: calc(1.7rem * var(--scale));
       gap: calc(5.4rem * var(--scale));
       left: calc(3rem * var(--scale));
-      
+
       width: 100%;
     }
   }
@@ -139,7 +139,5 @@
         }
       }
     }
-
-  
   }
 }
