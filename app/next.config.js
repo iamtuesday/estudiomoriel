@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['amgwebsites.s3.amazonaws.com']
+    domains: ['tuesdays3.sfo3.digitaloceanspaces.com']
   },
   i18n:{
     locales:["en","es"],

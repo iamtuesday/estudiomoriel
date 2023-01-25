@@ -23,8 +23,8 @@ const HomeWhyChoose = ({ choose, section }: AboutProps) => {
                 <Image
                   src={icon.url}
                   alt={icon.alternativeText}
-                  width={icon.width}
-                  height={icon.height}
+                  width={80}
+                  height={80}
                 />
               </figure>
               <div className="HomeWhyChoose-content">
