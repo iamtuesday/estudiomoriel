@@ -16,6 +16,7 @@ export const Footer = () => {
         <ul className="Footer-ul">
           <li className="Footer-li">
             {/* <h2 className="Footer-label">{footer_titles.lbl_address}</h2> */}
+            <h2 className="Footer-label">Dirección:</h2>
             <a
               className={`Footer-a ${!url_map ? "pointer-events-none" : ""}`}
               href={url_map || "#"}
@@ -29,6 +30,7 @@ export const Footer = () => {
 
           <li className="Footer-li">
             {/* <h2 className="Footer-label">{footer_titles.lbl_email}</h2> */}
+            <h2 className="Footer-label">Email:</h2>
             <a className="Footer-a" href={`mailto:${email}`}>
               {/* <i className="icon-email Footer-i"></i> */}
               {email}
@@ -37,20 +39,22 @@ export const Footer = () => {
 
           <li className="Footer-li">
             {/* <h2 className="Footer-label">{footer_titles.lbl_phone}</h2> */}
+            <h2 className="Footer-label">Whatsapp:</h2>
             <a className="Footer-a" href={`tel:${whatsapp}`}>
               {/* <i className="icon-phone-2 Footer-i"></i> */}
               {whatsapp}
             </a>
           </li>
-
         </ul>
         <div className="Footer-Socials">
           {/* <p className="Footer-lblFollow">{footer_titles.lbl_follow}</p> */}
+          <p className="Footer-lblFollow">Socials:</p>
           <Socials className="Footer-socials" />
         </div>
       </div>
       <div className="Footer-Copyright">
         {/* <h3>{footer_titles.lbl_copyright}</h3> */}
+                <h3>Copyright © 2023</h3>
       </div>
     </footer>
   );

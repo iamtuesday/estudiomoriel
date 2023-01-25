@@ -32,19 +32,19 @@
 }
 
 .Text-Field {
-  label {
+  /* label {
     @apply font-roboto font-normal text-white text-[1.6rem] leading-[180%] uppercase;
     @media screen(laptop) {
       font-size: calc(1.9rem * var(--scale));
     }
-  }
+  } */
 
   input {
     @apply h-[3.5rem]  bg-transparent text-white;
     border-bottom: 0.2rem solid #6b6b6b;
     /* opacity: 0.7; */
     &::placeholder {
-      @apply text-[#252525] font-nunito;
+      @apply text-[#252525] font-nunito font-light opacity-70;
     }
     @media screen(laptop) {
       height: calc(3rem * var(--scale));
@@ -59,7 +59,7 @@
     @apply font-nunito font-normal  text-white h-[10.4rem] bg-transparent;
     border-bottom: 0.2rem solid #6b6b6b;
     &::placeholder {
-      @apply text-[#252525] font-nunito;
+      @apply text-[#252525] font-nunito font-light opacity-70;
     }
     @media screen(laptop) {
       padding: calc(0.8rem * var(--scale)) 0;
@@ -73,15 +73,17 @@
   }
 }
 .select {
-  label {
+  /* label {
     @apply font-nunito font-normal text-[#252525] text-[1.6rem] leading-[180%] uppercase;
     @media screen(laptop) {
       font-size: calc(1.9rem * var(--scale));
     }
+  } */
+  option{
+    @apply bg-primary ;
   }
   select {
-    @apply bg-transparent font-nunito text-[#252525];
-    /* height: calc(3rem * var(--scale)); */
+    @apply bg-transparent font-nunito;
     -webkit-appearance: none;
     border-bottom: 0.2rem solid rgba(107, 107, 107, 0.7);
 

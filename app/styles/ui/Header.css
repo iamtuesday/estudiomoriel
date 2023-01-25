@@ -1,13 +1,13 @@
 .Header {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  @apply sticky top-0 right-0 left-0 z-20 flex items-center w-full;
+  @apply sticky top-0 right-0 left-0 z-20 flex items-center w-full bg-primary;
   transition: background 0.5s ease;
   height: 5.8rem;
-  background: #ffffff;
+  /* background: #ffffff; */
   @media screen(laptop) {
     @apply flex justify-between;
     height: calc(8.5rem * var(--scale));
-    box-shadow: none;
+    filter: drop-shadow(0 0 6px rgba(0,0,0,.15));
     top: -1px;
     /* z-index: 1; */
   }
@@ -28,13 +28,13 @@
   }
 
   &-logo {
-    @apply left-[3rem]   w-[7rem] absolute top-[1rem] bg-white pb-[1rem] px-[1rem];
-    border-radius: 0px 0px 10px 10px;
+    @apply left-[3rem]   w-[7rem] absolute top-[1rem] pb-[1rem] px-[1rem];
+    
     @screen laptop {
       @apply relative;
       left: calc(21rem * var(--scale));
-      top: calc(6rem * var(--scale));
-      width: calc(12rem * var(--scale));
+      top: calc(0.5rem * var(--scale));
+      width: calc(16rem * var(--scale));
     }
   }
 

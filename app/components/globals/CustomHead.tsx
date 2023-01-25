@@ -7,7 +7,7 @@ export const CustomHead: FC = () => {
   const { polylang } = useGenerals()
 
   // Agrega GetButton
-  useButton()
+  // useButton()
 
   return (
     <>

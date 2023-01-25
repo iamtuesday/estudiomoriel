@@ -16,6 +16,7 @@ import HomeCharacterist from "../components/organisms/HomeCharacterist";
 import { BannerMiddle } from "../components/molecules";
 import { HomeContact, HomeBanner } from "./../components/organisms";
 import HomeWhyChoose from "../components/organisms/HomeWhyChoose";
+import axios from "axios";
 
 interface HomeProps {
   home: HomeData;
@@ -36,7 +37,7 @@ const HomePage: NextPage<HomeProps> = ({ home, contact }) => {
       if (entry.isIntersecting) {
         const section = entry.target.getAttribute('data-section')
 
-        // if (section === '#form') return
+        // if (section === '#contact') return
 
         setActiveSection(String(section))
       }
@@ -101,5 +102,6 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 1,
   };
 };
+
 
 export default HomePage;

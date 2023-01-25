@@ -97,7 +97,7 @@ export const Form: FC<FormProps> = ({ name, phone, email, message, submit, messa
             <div className="relative Text-field select">
                 {/* <label htmlFor={service.name}>{service.label}</label> */}
                 <select value={formState.service} name={service?.name} onInput={validateSelect} id={service?.name}>
-                    <option value="" disabled>{service.placeholder}</option>
+                    {/* <option value="" disabled>{service.placeholder}</option> */}
                     {services.map(({ title }, i) => (
                         <option key={i} value={convertToSlug(title)}>
                             {title}

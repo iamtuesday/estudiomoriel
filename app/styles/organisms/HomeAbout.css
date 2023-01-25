@@ -35,7 +35,7 @@
       margin-top: calc(1rem * var(--scale));
     }
     p{
-      @screen laptop {
+      @media screen(laptop) {
         @apply text-center;
         margin-top: calc(1.5rem * var(--scale));
       }
@@ -43,7 +43,7 @@
   }
 
   &-content p{
-    @apply font-poppins font-light;
+    @apply font-roboto font-light;
     @screen laptop {
       font-size: calc(1.75rem * var(--scale));
     }

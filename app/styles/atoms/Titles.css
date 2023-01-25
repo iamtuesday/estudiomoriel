@@ -16,9 +16,9 @@
         }
      }
      &-p {
-        @apply text-content font-poppins text-center  leading-[170%]  text-[1.5rem] font-light mt-[.5rem];
+        @apply text-content font-roboto text-center  leading-[170%]  text-[1.5rem] font-light mt-[.5rem];
         @media screen(laptop) {
-           font-size: calc(1.8rem * var(--scale));
+           font-size: calc(1.7rem * var(--scale));
            width: calc(62rem * var(--scale));
            margin-top: calc(2rem * var(--scale));
         }
@@ -26,7 +26,7 @@
  
      &-white{
       .Titles-h2 {
-        @apply text-white;
+        @apply text-white mx-auto;
         @media screen(laptop) {
           width: calc(40rem * var(--scale));
         }
@@ -45,7 +45,7 @@
       }
  
       .Titles-p{
-        @apply text-center w-full;
+        @apply text-center mx-auto;
       }
      }
  

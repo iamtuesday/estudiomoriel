@@ -20,7 +20,8 @@
   &-left {
     @apply pt-[5rem] flex justify-center;
     @media screen(laptop) {
-    @apply p-0;}
+      @apply p-0;
+    }
   }
 
   &-content p {

@@ -64,7 +64,7 @@ export const Navbar: FC<NavbarProps> = ({ isMenuOpen, closeMenu }) => {
           ) : (
             <li
               onClick={() => handleClick(url)}
-              className={`Navbar-li ${url === activeSection ? "isActive" : ""}`}
+              className={`Navbar-li ${url === activeSection ? "isActive " : ""}`}
               key={id}
             >
               <div
@@ -80,7 +80,7 @@ export const Navbar: FC<NavbarProps> = ({ isMenuOpen, closeMenu }) => {
             </li>
           )
         )}
-        <div className="btn-whatsapp" onClick={handleContactClick}>
+        <div className="btn-whatsapp text-white" onClick={handleContactClick}>
           <a
             href={`${polylang.whatsapp_url}`}
             target="_blank"

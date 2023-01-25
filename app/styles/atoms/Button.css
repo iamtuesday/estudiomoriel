@@ -49,14 +49,14 @@
     }
 
     &:hover {
-      @apply text-white z-[1];
+      @apply text-primary z-[1];
     }
     @media screen(laptop) {
       font-size: calc(1.9rem * var(--scale));
       padding: calc(1.7rem * var(--scale)) calc(4.5rem * var(--scale));
 
       &:hover::after {
-        @apply w-full bg-primary;
+        @apply w-full bg-white;
       }
     }
   }
