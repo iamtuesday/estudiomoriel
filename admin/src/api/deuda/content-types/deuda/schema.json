@@ -4,7 +4,8 @@
   "info": {
     "singularName": "deuda",
     "pluralName": "deudas",
-    "displayName": "Deuda"
+    "displayName": "Deuda",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,9 +17,6 @@
     },
     "slug": {
       "type": "string"
-    },
-    "content": {
-      "type": "richtext"
     },
     "videos": {
       "displayName": "Videos",
@@ -37,6 +35,11 @@
       "type": "component",
       "repeatable": true,
       "component": "blocks.blog-deudas"
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.banner-deudas"
     }
   }
 }
