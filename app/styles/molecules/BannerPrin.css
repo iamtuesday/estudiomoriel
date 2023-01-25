@@ -1,5 +1,5 @@
 .srt {
-  @apply font-nunito font-extrabold text-[3.5rem] text-white leading-[130%] uppercase  z-[1];
+  @apply font-nunito font-extrabold text-[3.5rem] text-primary leading-[130%] uppercase  z-[1];
   @screen laptop {
     font-size: calc(6rem * var(--scale));
     width: calc(80rem * var(--scale));
@@ -28,12 +28,12 @@
       &::before {
         content: "";
         background: #ced4da;
-        background: radial-gradient(167.38% 466.68% at 112.53% 21.26%,#a3e3ff 7.08%,#001a57 59.45%);
+        /* background: radial-gradient(167.38% 466.68% at 112.53% 21.26%,#a3e3ff 7.08%,#001a57 59.45%); */
       }
    
     }
     &__subtitle {
-      @apply font-nunito font-light text-white text-[2.42rem]  leading-[170%];
+      @apply font-nunito font-light text-[#556382] text-[2.42rem]  leading-[170%];
       @media screen(laptop){
         font-size: calc(2.5rem * var(--scale));
         margin-bottom: calc(2.5rem * var(--scale));
