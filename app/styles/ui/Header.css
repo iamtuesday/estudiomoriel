@@ -28,7 +28,7 @@
   }
 
   &-logo {
-    @apply left-[3rem]   w-[7rem] absolute top-[1rem] pb-[1rem] px-[1rem];
+    @apply left-[3rem]   w-[13rem] absolute top-[1rem] pb-[1rem] px-[1rem];
     
     @screen laptop {
       @apply relative;

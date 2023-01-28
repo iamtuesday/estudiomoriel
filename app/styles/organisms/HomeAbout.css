@@ -4,7 +4,7 @@
     padding-top: calc(10rem * var(--scale));
   }
   &-left{
-    @appply hidden;
+    @apply hidden;
     @screen laptop {
       @apply flex items-center justify-center;
     }
@@ -51,7 +51,7 @@
 
   &-ul{
     border-top: 1px solid #dcdcdc;
-    @apply grid grid-cols-3;
+    @apply grid grid-cols-3 mt-[2rem] pt-[1rem];
     @screen laptop {
       padding-top: calc(2rem * var(--scale));
       margin-top: calc(3rem * var(--scale));

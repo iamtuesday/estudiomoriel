@@ -16,7 +16,7 @@
     min-height: 58.8rem;
     &::before {
       content: "";
-      background: rgba(0, 0, 0, 0.8);
+      background: #ced4da;
       mix-blend-mode: multiply;
       @apply absolute inset-0 z-[-1];
     }
@@ -33,7 +33,7 @@
    
     }
     &__subtitle {
-      @apply font-nunito font-light text-[#556382] text-[2.42rem]  leading-[170%];
+      @apply font-nunito font-light text-[#556382] text-[2.42rem]  leading-[170%] mb-[1rem];
       @media screen(laptop){
         font-size: calc(2.5rem * var(--scale));
         margin-bottom: calc(2.5rem * var(--scale));
@@ -41,7 +41,7 @@
     }
   
     &__btn {
-      @apply inline-block;
+      @apply inline-block mt-[2rem];
       @media screen(laptop){
         margin-top: calc(2.5rem * var(--scale));
       }

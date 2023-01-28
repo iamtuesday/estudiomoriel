@@ -8,7 +8,7 @@ specifiers:
   '@types/react-dom': 18.0.6
   '@types/react-google-recaptcha': ^2.1.5
   autoprefixer: 10.4.12
-  axios: 1.1.0
+  axios: ^1.2.5
   eslint: 8.24.0
   eslint-config-next: 12.3.1
   fslightbox-react: 1.6.2-2
@@ -25,7 +25,7 @@ specifiers:
   typescript: 4.8.4
 
 dependencies:
-  axios: 1.1.0
+  axios: 1.2.5
   fslightbox-react: 1.6.2-2_v2m5e27vhdewzwhryxwfaorcca
   markdown-it: 13.0.1
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
@@ -545,8 +545,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axios/1.1.0:
-    resolution: {integrity: sha512-hsJgcqz4JY7f+HZ4cWTrPZ6tZNCNFPTRx1MjRqu/hbpgpHdSCUpLVuplc+jE/h7dOvyANtw/ERA3HC2Rz/QoMg==}
+  /axios/1.2.5:
+    resolution: {integrity: sha512-9pU/8mmjSSOb4CXVsvGIevN+MlO/t9OWtKadTaLuN85Gge3HGorUckgp8A/2FH4V4hJ7JuQ3LIeI7KAV9ITZrQ==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
