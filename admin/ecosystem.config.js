@@ -1,12 +1,12 @@
 module.exports = {
   apps: [
     {
-      name: "3013-estudiomoriel-strapi",
+      name: "3007-estudiomoriel-service",
       script: "npm",
       args: "start",
       env: {
         NODE_ENV: "production",
-        PORT: 3013, // El puerto donde se ejecute el proyecto
+        PORT: 3007, // El puerto donde se ejecute el proyecto
       },
     },
   ],
